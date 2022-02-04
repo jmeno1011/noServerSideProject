@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import logo from "./logo.svg";
 
 export function Home() {
@@ -71,6 +71,7 @@ export function Home() {
         >
           Learn React
         </a>
+        <Outlet />
       </header>
     </>
   );

@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+details>summary {
+  cursor: pointer;
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+summary::after {
+  content: '🔻';
+}
+details[open] summary:after {
+  content: "🔺";
+}
+.a-white{
+  color: white ;
+  /* text-decoration: none; */
+}
+
+*{
+  box-sizing:border-box;
+}

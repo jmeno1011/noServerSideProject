@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -37,24 +37,20 @@
   }
 }
 
-details>summary {
+details > summary {
   cursor: pointer;
   list-style: none;
 }
 summary::-webkit-details-marker {
-  display: none
+  display: none;
 }
 summary::after {
-  content: '🔻';
+  content: "🔻";
 }
 details[open] summary:after {
   content: "🔺";
 }
-.a-white{
-  color: white ;
+.a-white {
+  color: white;
   /* text-decoration: none; */
-}
-
-*{
-  box-sizing:border-box;
 }

@@ -21,6 +21,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .app {
@@ -30,7 +31,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.weather__app {
+  background-color: #282c34;
+  min-height: calc(100vh - 40px);
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
 }
 .app__left {
@@ -38,7 +47,22 @@
   width: 20%;
   height: 100vh;
   padding: 1.25rem;
-  border-right: 1px solid thistle;
+  text-align: left;
+}
+.side__nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.side__nav a:active {
+  border: 1px solid cornflowerblue;
+}
+.vertical__hr {
+  height: calc(100vh - 1rem);
+  border-left: 1px solid thistle;
 }
 .app__right {
   width: 80%;

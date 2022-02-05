@@ -5,7 +5,6 @@ import styles from "./css/styles.module.css";
 
 export function Main() {
   const location = useLocation();
-  console.log(location.pathname);
   const nav = {
     main: "/main",
     weather: "/main/weather",
@@ -41,11 +40,28 @@ export function Main() {
           </ul>
         </nav>
       </div>
-      <Outlet />
 
       <div className={styles.app}>
-        <div className={styles.app__left}>left</div>
-        <div className={styles.app__right}>right</div>
+        <div className={styles.app__left}>
+          <nav className={styles.side__nav}>
+            <ul>
+              <li>
+                <Link
+                  to="weather"
+                  className={
+                    location.pathname === nav.weather ? `${styles.active}` : ""
+                  }
+                >
+                  weather
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className={styles.vertical__hr}></div>
+        <div className={styles.app__right}>
+          <Outlet />
+        </div>
       </div>
 
       <div className={styles.footer}>

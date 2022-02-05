@@ -32,7 +32,7 @@ export function Weather() {
   }, []);
   return (
     <>
-      <div className={styles.app}>
+      <div className={styles.weather__app}>
         <div>
           <p>위도 : {location.lat}</p>
           <p>경도 : {location.lon}</p>

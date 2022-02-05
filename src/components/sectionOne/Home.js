@@ -26,12 +26,6 @@ export function Home() {
                   </Link>
                 </p>
                 <p>
-                  <Link to="/main/weather" className="a-white">
-                    weather
-                  </Link>
-                </p>
-
-                <p>
                   <a href="/" onClick={onClickSignOut} className="a-white">
                     Sign Out
                   </a>

@@ -8,7 +8,7 @@ export function Weather() {
   const getGeolocation = () => {
     if ("geolocation" in navigator) {
       /* 위치정보 사용 가능 */
-      console.log(navigator);
+      // console.log(navigator);
       navigator.geolocation.getCurrentPosition(async (position) => {
         setLocation({
           lat: position.coords.latitude,

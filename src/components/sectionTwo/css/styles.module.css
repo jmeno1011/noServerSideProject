@@ -1,18 +1,20 @@
 .header {
   height: 50px;
+  min-width: 300px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   background-color: #15171c;
 }
-.header > a {
+.header a {
   margin: 0 1rem;
   color: white;
   text-decoration: none;
 }
-.header > nav {
-  /* width: 600px; */
+.header .active {
+  color: yellowgreen;
+}
+.header nav {
   height: 100%;
 }
 .header ul {
@@ -26,12 +28,31 @@
   min-height: 100vh;
   min-width: 300px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.app__left {
+  /* width: 16rem; */
+  width: 20%;
+  height: 100vh;
+  padding: 1.25rem;
+  border-right: 1px solid thistle;
+}
+.app__right {
+  width: 80%;
+  height: 100vh;
+  padding: 1.25rem;
+}
 .footer {
   height: 50px;
+  background-color: #15171c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer > p {
+  margin: 0;
+  color: white;
 }

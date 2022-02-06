@@ -29,7 +29,6 @@
   min-height: 100vh;
   min-width: 300px;
   display: flex;
-  align-items: center;
   justify-content: center;
   color: white;
 }
@@ -38,8 +37,6 @@
   min-height: calc(100vh - 40px);
   min-width: 300px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
 }
 .app__left {
@@ -52,16 +49,19 @@
 .side__nav a {
   color: white;
   text-decoration: none;
-  margin-left: 0;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1rem;
 }
 .side__nav a:active {
-  border: 1px solid cornflowerblue;
+  border: 1px solid #6495ed;
+}
+.side__nav li {
+  margin: 0.5rem 0;
 }
 .vertical__hr {
-  height: calc(100vh - 1rem);
+  height: calc(100vh - 2rem);
+  margin: 1rem 0;
   border-left: 1px solid thistle;
 }
 .app__right {
@@ -79,4 +79,21 @@
 .footer > p {
   margin: 0;
   color: white;
+}
+
+/* -----Memo----- */
+.memo__ul > li {
+  list-style: circle;
+  margin-left: 2rem;
+}
+.front__memo_p {
+  margin-left: 1rem;
+}
+.memo__app {
+  background-color: #282c34;
+  /* min-height: calc(100vh - 40px); */
+  height: calc(100vh - 40px);
+  min-width: 300px;
+  color: white;
+  overflow: auto;
 }

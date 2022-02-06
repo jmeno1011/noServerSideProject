@@ -46,19 +46,16 @@ export function Main() {
           <nav className={styles.side__nav}>
             <ul>
               <li>
-                <Link
-                  to="weather"
-                  className={
-                    location.pathname === nav.weather ? `${styles.active}` : ""
-                  }
-                >
-                  weather
-                </Link>
+                <Link to="weather">weather</Link>
+              </li>
+              <li>
+                <Link to="memo">memo</Link>
               </li>
             </ul>
           </nav>
         </div>
         <div className={styles.vertical__hr}></div>
+
         <div className={styles.app__right}>
           <Outlet />
         </div>

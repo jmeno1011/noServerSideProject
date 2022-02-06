@@ -1,2 +1,3 @@
-export {Main} from "./Main"
-export {Weather} from "./Weather"
+export { Main } from "./Main";
+export { Weather } from "./Weather";
+export { Memo } from "./Memo";

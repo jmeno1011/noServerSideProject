@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/sectionOne";
-import { Main, Weather } from "./components/sectionTwo";
+import { Main, Memo, Weather } from "./components/sectionTwo";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="sign-in" element={<SignIn />} />
         <Route path="main/" element={<Main />}>
           <Route path="weather" element={<Weather />} />
+          <Route path="memo" element={<Memo />} />
         </Route>
         <Route
           path="*"

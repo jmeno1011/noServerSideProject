@@ -44,6 +44,9 @@ export function Weather() {
               <p>체감온도 : {Math.round(data.main.feels_like - 273.15)}℃</p>
               <p>현재기온 : {Math.round(data.main.temp - 273.15)}℃</p>
               <p>습도 : {data.main.humidity}%</p>
+              <p>날씨 : {data.weather[0].main}</p>
+              <p>날씨 설명 : {data.weather[0].description}</p>
+              {data.weather[0].icon}
             </>
           ) : (
             ""

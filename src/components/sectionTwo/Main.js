@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import styles from "./css/styles.module.css";
 
@@ -50,6 +49,9 @@ export function Main() {
               </li>
               <li>
                 <Link to="memo">memo</Link>
+              </li>
+              <li>
+                <Link to="weather2">weather2</Link>
               </li>
             </ul>
           </nav>

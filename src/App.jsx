@@ -21,6 +21,7 @@ function App() {
           element={
             <main style={{ padding: "1rem" }}>
               <p>There's nothing here!</p>
+              <img className="img-404" src={`https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg`}/>
             </main>
           }
         />

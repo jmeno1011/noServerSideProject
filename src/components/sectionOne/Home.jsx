@@ -21,12 +21,12 @@ export function Home() {
             {isLogin ? (
               <>
                 <p>
-                  <Link to={"/main"} className="a-white">
+                  <Link to={"main"} className="a-white">
                     Main
                   </Link>
                 </p>
                 <p>
-                  <a href="/" onClick={onClickSignOut} className="a-white">
+                  <a href="/noServerSideProject" onClick={onClickSignOut} className="a-white">
                     Sign Out
                   </a>
                 </p>
@@ -34,12 +34,12 @@ export function Home() {
             ) : (
               <>
                 <p>
-                  <Link to={"/sign-up"} className="a-white">
+                  <Link to={"sign-up"} className="a-white">
                     Sign Up
                   </Link>
                 </p>
                 <p>
-                  <Link to={"/sign-in"} className="a-white">
+                  <Link to={"sign-in"} className="a-white">
                     Sign In
                   </Link>
                 </p>
@@ -49,7 +49,7 @@ export function Home() {
           <p>You can do this, I believe in you.</p>
         </main>
         <nav>
-          <Link to="/about" className="a-white">
+          <Link to="about" className="a-white">
             Click this Link ⇒ About
           </Link>
         </nav>

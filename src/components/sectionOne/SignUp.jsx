@@ -46,7 +46,7 @@ export function SignUp() {
         <div><input type={"password"} placeholder="CONFIRM PASSWORD" value={confirmPassword} onChange={onChangeConfirmPassword} className={styles.signupin__input}/></div>
         <button className={styles.signupin__button}>Sign Up</button>
       </form>
-      <Link to="/" className="a-white">
+      <Link to="/noServerSideProject" className="a-white">
         Home
       </Link>
     </div>

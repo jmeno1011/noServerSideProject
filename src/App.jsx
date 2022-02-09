@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="sign-up" element={<SignUp />} />
-        <Route path="sign-in" element={<SignIn />} />
-        <Route path="main/" element={<Main />}>
+        <Route path="/noServerSideProject/" element={<Home />} />
+        <Route path="noServerSideProject/about" element={<About />} />
+        <Route path="noServerSideProject/sign-up" element={<SignUp />} />
+        <Route path="noServerSideProject/sign-in" element={<SignIn />} />
+        <Route path="noServerSideProject/main/" element={<Main />}>
           <Route path="weather" element={<Weather />} />
           <Route path="weather2" element={<Weather2 />} />
           <Route path="memo" element={<Memo />} />

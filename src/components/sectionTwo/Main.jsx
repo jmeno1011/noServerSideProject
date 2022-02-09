@@ -5,20 +5,20 @@ import styles from "./css/styles.module.css";
 export function Main() {
   const location = useLocation();
   const nav = {
-    main: "/main",
-    weather: "/main/weather",
+    main: "/noServerSideProject/main",
+    weather: "/noServerSideProject/main/weather",
   };
   return (
     <>
       <div className={styles.header}>
-        <Link to="/">
+        <Link to="/noServerSideProject">
           <h2>home</h2>
         </Link>
         <nav>
           <ul>
             <li>
               <Link
-                to="/main"
+                to=""
                 className={
                   location.pathname === nav.main ? `${styles.active}` : ""
                 }

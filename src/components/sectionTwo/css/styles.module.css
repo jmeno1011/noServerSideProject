@@ -1,5 +1,6 @@
 .header {
   height: 50px;
+  width: 100%;
   min-width: 300px;
   display: flex;
   align-items: center;
@@ -26,25 +27,27 @@
 }
 .app {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
+  width: 100%;
   min-width: 300px;
   display: flex;
   justify-content: center;
   color: white;
 }
-.weather__app {
+/* .weather__app {
   background-color: #282c34;
   min-height: calc(100vh - 40px);
   min-width: 300px;
   display: flex;
   color: white;
-}
+} */
 .app__left {
-  /* width: 16rem; */
-  width: 20%;
-  height: 100vh;
+  max-width: 350px;
   padding: 1.25rem;
   text-align: left;
+}
+.side__nav{
+  width: 100%;
 }
 .side__nav li, a {
   width: 100%;
@@ -59,17 +62,13 @@
 .side__nav a:active {
   border: 1px solid #6495ed;
 }
-/* .side__nav li {
-  margin: 0.5rem 0;
-} */
+
 .vertical__hr {
-  height: calc(100vh - 2rem);
   margin: 1rem 0;
   border-left: 1px solid thistle;
 }
 .app__right {
   width: 80%;
-  height: 100vh;
   padding: 1.25rem;
 }
 .footer {
@@ -96,7 +95,6 @@
   background-color: #282c34;
   /* min-height: calc(100vh - 40px); */
   height: calc(100vh - 40px);
-  min-width: 300px;
   color: white;
-  overflow: auto;
+  /* overflow: auto; */
 }

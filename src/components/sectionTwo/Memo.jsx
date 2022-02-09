@@ -3,7 +3,8 @@ import styles from "./css/styles.module.css";
 
 export function Memo() {
   return (
-    <div className={styles.memo__app}>
+    <>
+    {/* <div className={styles.memo__app}> */}
       <h2>메모내용</h2>
       <h3>・프론트 주제</h3>
       <p className={styles.front__memo_p}>
@@ -25,6 +26,7 @@ export function Memo() {
       <p>bdi라는 21개의 문진을 하여 성별 나이 문진 결과를 수집</p>
       <p>1인당 1회씩을 하기 위해서는 kakao같은 이메일을 수집하여 중복처리를 한다.</p>
       <p>email 수집 동의, kakao api연동, 수집한 데이터 사용 용도 생각하기</p>
-    </div>
+    {/* </div> */}
+    </>
   );
 }

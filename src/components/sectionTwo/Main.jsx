@@ -57,7 +57,6 @@ export function Main() {
           </nav>
         </div>
         <div className={styles.vertical__hr}></div>
-
         <div className={styles.app__right}>
           <Outlet />
         </div>

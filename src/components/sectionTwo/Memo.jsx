@@ -22,10 +22,13 @@ export function Memo() {
         <li>운영체제 10판</li>
         <li>밑바닥부터 만드는 인터프리터 in Go</li>
       </ul>
-      <h4>설문으로 리소스 모으기</h4>
-      <p>bdi라는 21개의 문진을 하여 성별 나이 문진 결과를 수집</p>
-      <p>1인당 1회씩을 하기 위해서는 kakao같은 이메일을 수집하여 중복처리를 한다.</p>
-      <p>email 수집 동의, kakao api연동, 수집한 데이터 사용 용도 생각하기</p>
+      <h3>설문으로 리소스 모으기</h3>
+      <p className={styles.front__memo_p}>bdi라는 21개의 문진을 하여 성별 나이 문진 결과를 수집</p>
+      <p className={styles.front__memo_p}>1인당 1회씩을 하기 위해서는 kakao같은 이메일을 수집하여 중복처리를 한다.</p>
+      <p className={styles.front__memo_p}>email 수집 동의, kakao api연동, 수집한 데이터 사용 용도 생각하기</p>
+      <h3>・추가주제</h3>
+      <p className={styles.front__memo_p}>todo-list 만들어보기</p>
+      <p className={styles.front__memo_p}>스벨트로도 만들어보기</p>
     {/* </div> */}
     </>
   );

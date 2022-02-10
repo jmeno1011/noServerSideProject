@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import styles from "./css/styles.module.css";
 
@@ -8,6 +8,7 @@ export function Main() {
     main: "/noServerSideProject/main",
     weather: "/noServerSideProject/main/weather",
   };
+  
   return (
     <>
       <div className={styles.header}>

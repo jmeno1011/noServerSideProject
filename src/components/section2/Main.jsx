@@ -8,7 +8,7 @@ export function Main() {
     main: "/noServerSideProject/main",
     weather: "/noServerSideProject/main/weather",
   };
-  
+
   return (
     <>
       <div className={styles.header}>
@@ -53,6 +53,9 @@ export function Main() {
               </li>
               <li>
                 <Link to="weather2">weather2</Link>
+              </li>
+              <li>
+                <Link to="dom-select">dom-select</Link>
               </li>
             </ul>
           </nav>

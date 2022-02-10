@@ -1,7 +1,8 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Home, About, SignUp, SignIn } from "./components/sectionOne";
-import { Main, Memo, Weather, Weather2 } from "./components/sectionTwo";
+import { Home, About, SignUp, SignIn } from "./components/section1";
+import { Main, Memo, Weather, Weather2 } from "./components/section2";
+import DomSelect from "./components/section3/DomSelect";
 
 function App() {
   return (
@@ -15,13 +16,17 @@ function App() {
           <Route path="weather" element={<Weather />} />
           <Route path="weather2" element={<Weather2 />} />
           <Route path="memo" element={<Memo />} />
+          <Route path="dom-select" element={<DomSelect />} />
         </Route>
         <Route
           path="*"
           element={
             <main style={{ padding: "1rem" }}>
               <p>There's nothing here!</p>
-              <img className="img-404" src={`https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg`}/>
+              <img
+                className="img-404"
+                src={`https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg`}
+              />
             </main>
           }
         />

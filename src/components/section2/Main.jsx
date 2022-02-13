@@ -52,9 +52,6 @@ export function Main() {
                 <Link to="memo">memo</Link>
               </li>
               <li>
-                <Link to="weather2">weather2</Link>
-              </li>
-              <li>
                 <Link to="dom-select">dom-select</Link>
               </li>
             </ul>

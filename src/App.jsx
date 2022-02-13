@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
-import { Main, Memo, Weather, Weather2 } from "./components/section2";
+import { Main, Memo, Weather } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
         <Route path="noServerSideProject/sign-in" element={<SignIn />} />
         <Route path="noServerSideProject/main/" element={<Main />}>
           <Route path="weather" element={<Weather />} />
-          <Route path="weather2" element={<Weather2 />} />
           <Route path="memo" element={<Memo />} />
           <Route path="dom-select" element={<DomSelect />} />
         </Route>

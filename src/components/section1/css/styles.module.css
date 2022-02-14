@@ -1,50 +1,50 @@
-.app{
-    background-color: #282c34;
-    min-height: 100vh;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.app {
+  background-color: #282c34;
+  min-height: 100vh;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-.signupin__form{
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
+.signupin__form {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
 }
-.signupin__input{
-    width: 200px;
-    height: 50px;
-    padding-left: 10px;
-    margin: 10px;
+.signupin__input {
+  width: 200px;
+  height: 50px;
+  padding-left: 10px;
+  margin: 10px;
 }
-.signupin__button{
-    width: 200px;    
-    height: 30px;
-    margin: 0 10px;
-    display: block;
-    color: #282c34;
-    font-weight: 700;
-    border-radius: 20px;
-    border-color: #282c34;
+.signupin__button {
+  width: 200px;
+  height: 30px;
+  margin: 0 10px;
+  display: block;
+  color: #282c34;
+  font-weight: 700;
+  border-radius: 20px;
+  border-color: #282c34;
 }
-.signupin__button:hover{
-    background-color: rgb(165, 247, 219);
+.signupin__button:hover {
+  background-color: rgb(165, 247, 219);
 }
-.signupin__button:active{
-    background-color: rgb(104, 79, 243);
-    color: white;
+.signupin__button:active {
+  background-color: rgb(104, 79, 243);
+  color: white;
 }
-.test__div{
-    width: 240px;
-    height: 60px;
-    border: 1px solid whitesmoke;
-    border-radius: 10px;
+.test__div {
+  width: 240px;
+  height: 60px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
 }
-.test__p{
-    margin: 4px;
-    font-size: 1rem;
+.test__p {
+  margin: 4px;
+  font-size: 1rem;
 }

@@ -4,6 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
+// ReactDOM 첫번째 요소는 렌더링 할 요소, 두번째는 랜더링할 내부요소
 ReactDOM.render(
   <BrowserRouter>
     <App />

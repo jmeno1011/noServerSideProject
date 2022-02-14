@@ -18,17 +18,17 @@ export function SignIn() {
   console.log();
   const onSubmit = (e) => {
     e.preventDefault();
-    let isUser = user.find((value) => 
-      value.id === name && value.pw === password
+    let isUser = user.find(
+      (value) => value.id === name && value.pw === password
     );
-    if(isUser === undefined){
+    if (isUser === undefined) {
       return alert("username or password was invalid");
-    }else{
+    } else {
       window.localStorage.setItem("isLogin", JSON.stringify(true));
-      navigate('/noServerSideProject')
+      navigate("/noServerSideProject");
     }
   };
-  
+
   return (
     <div className={styles.app}>
       <form className={styles.signupin__form} onSubmit={onSubmit}>
@@ -52,13 +52,17 @@ export function SignIn() {
           />
         </div>
         <button className={styles.signupin__button}>Sign In</button>
-        <input type={"button"} className={styles.signupin__button} value={"Sign Up"}/>
+        <input
+          type={"button"}
+          className={styles.signupin__button}
+          value={"Sign Up"}
+        />
       </form>
       <div className={styles.test__div}>
-        <p className={styles.test__p}>test용 id: test</p> 
-        <p className={styles.test__p}>test용 pw: test</p> 
+        <p className={styles.test__p}>test용 id: test</p>
+        <p className={styles.test__p}>test용 pw: test</p>
       </div>
-      <Link to="/noServerSideProject" className="a-white">
+      <Link to="/noServerSideProject" className="a-white a-center">
         Home
       </Link>
     </div>

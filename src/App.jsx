@@ -17,6 +17,9 @@ import Counter3 from "./components/section5/Counter3";
 import Counter4 from "./components/section5/Counter4";
 import Say1 from "./components/section5/Say1";
 import Say2 from "./components/section5/Say2";
+import EventPractice1 from "./components/section6/EventPractice1";
+import EventPractice2 from "./components/section6/EventPractice2";
+import EventPractice3 from "./components/section6/EventPractice3";
 
 function App() {
   return (
@@ -69,6 +72,18 @@ function App() {
         <Route path="noServerSideProject/section6-4/" element={<Counter4 />} />
         <Route path="noServerSideProject/section6-5/" element={<Say1 />} />
         <Route path="noServerSideProject/section6-6/" element={<Say2 />} />
+        <Route
+          path="noServerSideProject/chapter4-1/"
+          element={<EventPractice1 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-2/"
+          element={<EventPractice2 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-3/"
+          element={<EventPractice3 />}
+        />
         <Route
           path="*"
           element={

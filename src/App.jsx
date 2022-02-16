@@ -11,8 +11,12 @@ import MyComponent5 from "./components/section5/MyComponent5";
 import MyComponent6 from "./components/section5/MyComponent6";
 import MyComponent7 from "./components/section5/MyComponent7";
 import MyComponent8 from "./components/section5/MyComponent8";
-import Counter from "./components/section6/Counter1";
-import Counter2 from "./components/section6/Counter2";
+import Counter from "./components/section5/Counter1";
+import Counter2 from "./components/section5/Counter2";
+import Counter3 from "./components/section5/Counter3";
+import Counter4 from "./components/section5/Counter4";
+import Say1 from "./components/section5/Say1";
+import Say2 from "./components/section5/Say2";
 
 function App() {
   return (
@@ -61,6 +65,10 @@ function App() {
         />
         <Route path="noServerSideProject/section6-1/" element={<Counter />} />
         <Route path="noServerSideProject/section6-2/" element={<Counter2 />} />
+        <Route path="noServerSideProject/section6-3/" element={<Counter3 />} />
+        <Route path="noServerSideProject/section6-4/" element={<Counter4 />} />
+        <Route path="noServerSideProject/section6-5/" element={<Say1 />} />
+        <Route path="noServerSideProject/section6-6/" element={<Say2 />} />
         <Route
           path="*"
           element={

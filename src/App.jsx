@@ -20,6 +20,11 @@ import Say2 from "./components/section5/Say2";
 import EventPractice1 from "./components/section6/EventPractice1";
 import EventPractice2 from "./components/section6/EventPractice2";
 import EventPractice3 from "./components/section6/EventPractice3";
+import EventPractice4 from "./components/section6/EventPractice4";
+import EventPractice5 from "./components/section6/EventPractice5";
+import EventPractice6 from "./components/section6/EventPractice6";
+import EventPractice7 from "./components/section6/EventPractice7";
+import EventPractice8 from "./components/section6/EventPractice8";
 
 function App() {
   return (
@@ -83,6 +88,26 @@ function App() {
         <Route
           path="noServerSideProject/chapter4-3/"
           element={<EventPractice3 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-4/"
+          element={<EventPractice4 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-5/"
+          element={<EventPractice5 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-6/"
+          element={<EventPractice6 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-7/"
+          element={<EventPractice7 />}
+        />
+        <Route
+          path="noServerSideProject/chapter4-8/"
+          element={<EventPractice8 />}
         />
         <Route
           path="*"

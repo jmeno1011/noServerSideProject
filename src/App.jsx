@@ -25,6 +25,9 @@ import EventPractice5 from "./components/section6/EventPractice5";
 import EventPractice6 from "./components/section6/EventPractice6";
 import EventPractice7 from "./components/section6/EventPractice7";
 import EventPractice8 from "./components/section6/EventPractice8";
+import ValidationSample from "./components/section7/validation/ValidationSample";
+import CompoRender from "./components/section7/CompoRender";
+import RefPractice from "./components/section7/RefPractice";
 
 function App() {
   return (
@@ -109,6 +112,8 @@ function App() {
           path="noServerSideProject/chapter4-8/"
           element={<EventPractice8 />}
         />
+        <Route path="noServerSideProject/chapter5-1/" element={<CompoRender />}/>
+        <Route path="noServerSideProject/chapter5-2/" element={<RefPractice />}/>
         <Route
           path="*"
           element={

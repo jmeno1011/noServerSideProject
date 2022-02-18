@@ -30,6 +30,7 @@ import RefPractice from "./components/section7/RefPractice";
 import Chapter5 from "./components/section7/Chapter5";
 import { IterationSample1 } from "./components/section8/IterationSample1";
 import { IterationSample2 } from "./components/section8/IterationSample2";
+import LifeCycle from "./components/section9/LifeCycle";
 
 function App() {
   return (
@@ -125,6 +126,7 @@ function App() {
         <Route path="noServerSideProject/chapter5-3/" element={<Chapter5 />} />
         <Route path="noServerSideProject/chapter6-1/" element={<IterationSample1 />} />
         <Route path="noServerSideProject/chapter6-2/" element={<IterationSample2 />} />
+        <Route path="noServerSideProject/chapter7-1/" element={<LifeCycle />} />
         <Route
           path="*"
           element={

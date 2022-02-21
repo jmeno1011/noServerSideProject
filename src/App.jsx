@@ -31,6 +31,12 @@ import Chapter5 from "./components/section7/Chapter5";
 import { IterationSample1 } from "./components/section8/IterationSample1";
 import { IterationSample2 } from "./components/section8/IterationSample2";
 import LifeCycle from "./components/section9/LifeCycle";
+import { Counters } from "./components/section10/Counters";
+import { Info } from "./components/section10/Info";
+import Counters2 from "./components/section10/Counters2";
+import { Info2 } from "./components/section10/Info2";
+import { Average } from "./components/section10/Average";
+import { Info3 } from "./components/section10/Info3";
 
 function App() {
   return (
@@ -44,6 +50,7 @@ function App() {
           <Route path="weather" element={<Weather />} />
           <Route path="memo" element={<Memo />} />
           <Route path="dom-select" element={<DomSelect />} />
+          
         </Route>
         <Route
           path="noServerSideProject/section5/"
@@ -127,6 +134,12 @@ function App() {
         <Route path="noServerSideProject/chapter6-1/" element={<IterationSample1 />} />
         <Route path="noServerSideProject/chapter6-2/" element={<IterationSample2 />} />
         <Route path="noServerSideProject/chapter7-1/" element={<LifeCycle />} />
+        <Route path="noServerSideProject/chapter8-1" element={<Counters />} />
+        <Route path="noServerSideProject/chapter8-2" element={<Info />} />
+        <Route path="noServerSideProject/chapter8-3" element={<Counters2 />} />
+        <Route path="noServerSideProject/chapter8-4" element={<Info2 />} />
+        <Route path="noServerSideProject/chapter8-5" element={<Average />} />
+        <Route path="noServerSideProject/chapter8-6" element={<Info3 />} />
         <Route
           path="*"
           element={

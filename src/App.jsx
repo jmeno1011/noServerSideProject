@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Main, Memo, Weather } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
@@ -40,6 +40,8 @@ import { Info3 } from "./components/section10/Info3";
 import { SassComponent } from "./components/section11/SassComponent";
 
 function App() {
+  let navigate = useNavigate();
+  const imgUrl = "https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg"
   return (
     <div className="App">
       <Routes>
@@ -155,10 +157,7 @@ function App() {
           element={
             <main style={{ padding: "1rem" }}>
               <p>There's nothing here!</p>
-              <img
-                className="img-404"
-                src={`https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg`}
-              />
+              <img className="img-404" src={imgUrl} onClick={()=>{navigate('/noServerSideProject')}} />
             </main>
           }
         />

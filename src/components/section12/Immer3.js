@@ -22,6 +22,8 @@ const Immer3 = () => {
         //   ...form,
         //   [name]: [value],
         // }
+        // produce(form, (draft) => {
+        // 위와 같은 내용을 아래로 변경 (produce 함수의 파라미터를 함수 형태로 사용)
         produce((draft) => {
           draft[name] = value;
         })

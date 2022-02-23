@@ -38,10 +38,14 @@ import { Info2 } from "./components/section10/Info2";
 import { Average } from "./components/section10/Average";
 import { Info3 } from "./components/section10/Info3";
 import { SassComponent } from "./components/section11/SassComponent";
+import Immer from "./components/section12/Immer";
+import Immer2 from "./components/section12/Immer2";
+import Immer3 from "./components/section12/Immer3";
 
 function App() {
   let navigate = useNavigate();
-  const imgUrl = "https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg"
+  const imgUrl =
+    "https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg";
   return (
     <div className="App">
       <Routes>
@@ -152,12 +156,21 @@ function App() {
           path="noServerSideProject/chapter9-1"
           element={<SassComponent />}
         />
+        <Route path="noServerSideProject/chapter12-1" element={<Immer />} />
+        <Route path="noServerSideProject/chapter12-2" element={<Immer2 />} />
+        <Route path="noServerSideProject/chapter12-3" element={<Immer3 />} />
         <Route
           path="*"
           element={
             <main style={{ padding: "1rem" }}>
               <p>There's nothing here!</p>
-              <img className="img-404" src={imgUrl} onClick={()=>{navigate('/noServerSideProject')}} />
+              <img
+                className="img-404"
+                src={imgUrl}
+                onClick={() => {
+                  navigate("/noServerSideProject");
+                }}
+              />
             </main>
           }
         />

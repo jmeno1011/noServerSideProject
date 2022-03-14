@@ -23,3 +23,12 @@ ul {
 ::after {
   box-sizing: border-box;
 }
+code {
+  display: block;
+  padding: 1rem;
+  background: gray;
+  color: white;
+}
+.component {
+  padding: 0.5rem;
+}

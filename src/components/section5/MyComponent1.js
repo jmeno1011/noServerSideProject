@@ -1,5 +1,6 @@
 // 화살표 문법 확인
 import React from "react";
+import PropTypes from "prop-types";
 
 function MyComponent1(props) {
   const blackDog = new BlackDog();
@@ -8,7 +9,44 @@ function MyComponent1(props) {
   const whiteDog = new WhiteDog();
   whiteDog.bark();
 
-  return <div>안녕하세요, 제 이름은 {props.name}입니다.</div>;
+  return (
+    <>
+      <div className="component">
+        <h3>MyComponent1</h3>
+        <code>{"<MyComponent1 name='React' /> "}</code>
+        <p>name에서 props.name값을 받아서 React 출력됨</p>
+        <div>안녕하세요, 제 이름은 {props.name}입니다.</div>
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent2 />
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent3>리액트</MyComponent3>
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent4>리액트</MyComponent4>
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent5>리액트</MyComponent5>
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent6 name={"3"}>리액트</MyComponent6>
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent7 favoriteNumber={3}>리액트</MyComponent7>
+      </div>
+      <hr />
+      <div className="component">
+        <MyComponent8 favoriteNumber={3}>리액트</MyComponent8>
+      </div>
+    </>
+  );
 }
 
 export default MyComponent1;
@@ -33,4 +71,182 @@ function WhiteDog() {
       console.log("WhiteDog : " + this.name + ": 멍멍!");
     },
   };
+}
+
+////////////////////////////////////////////////////////////
+function MyComponent2(props) {
+  return (
+    <>
+      <h2>MyComponent2</h2>
+      <code>{"MyComponent2.defaultProps = {name: '기본 이름' };"}</code>
+      <p>defaultProps를 이용해 props.name을 적용 할 수 도 있음</p>
+      <div>안녕하세요, 제 이름은 {props.name}입니다.</div>
+    </>
+  );
+}
+
+MyComponent2.defaultProps = {
+  name: "기본 이름",
+};
+
+////////////////////////////////////////////////////////////
+function MyComponent3(props) {
+  return (
+    <>
+      <h2>MyComponent3</h2>
+      <code>{"<MyComponent3>리액트</MyComponent3>"}</code>
+      <p>
+        MyComponent3의 컴포넌트 사이에 있는 리액트를 props.children으로 불러올수
+        있음
+      </p>
+      <div>children 값은 {props.children} 입니다.</div>
+    </>
+  );
+}
+
+////////////////////////////////////////////////////////////
+function MyComponent4(props) {
+  // 비구조화 할당
+  const { name, children } = props;
+  return (
+    <>
+      <h2>MyComponent4</h2>
+      <code>{"const {name, children} = props;"}</code>
+      <p>비구조 할당으로 선언하면 props를 생략 가능</p>
+      <div>
+        안녕하세요, 제 이름은 {name}입니다.
+        <br />
+        children 값은 {children} 입니다.
+      </div>
+    </>
+  );
+}
+
+MyComponent4.defaultProps = {
+  name: "기본 이름",
+};
+
+////////////////////////////////////////////////////////////
+function MyComponent5({ name, children }) {
+  return (
+    <>
+      <h2>MyComponent5</h2>
+      <code>{"MyComponent5({name, children})"}</code>
+      <p>함수형 컴포넌트 선언시 () 안의 대괄호에 넣어서 비구조 할당 </p>
+      <div>
+        안녕하세요, 제 이름은 {name}입니다.
+        <br />
+        children 값은 {children} 입니다.
+      </div>
+    </>
+  );
+}
+
+MyComponent5.defaultProps = {
+  name: "기본 이름",
+};
+
+////////////////////////////////////////////////////////////
+// PropTypes을 이용한 타입 지정
+function MyComponent6({ name, children }) {
+  return (
+    <>
+      <h2>MyComponent6</h2>
+      <code>
+        {
+          "MyComponent6.propTypes = {name: PropTypes.string,};\n<MyComponent6 name={'3'}>리액트</MyComponent6>"
+        }
+      </code>
+      <p>
+        name: PropTypes.string으로 name의 타입을 정해서 컴포넌트의 파라미터
+        name에는 어떤 값을 넣어도 string값으로 변경되어 들어간다.{" "}
+      </p>
+      <div>
+        안녕하세요, 제 이름은 {name}입니다.
+        <br />
+        children 값은 {children} 입니다.
+      </div>
+    </>
+  );
+}
+
+MyComponent6.defaultProps = {
+  name: "기본 이름",
+};
+
+MyComponent6.propTypes = {
+  name: PropTypes.string,
+};
+
+////////////////////////////////////////////////////////////
+// PropTypes을 이용한 타입 지정
+function MyComponent7({ name, favoriteNumber, children }) {
+  return (
+    <>
+      <h2>MyComponent7</h2>
+      <code>
+        {
+          "제가 좋아하는 숫자는 {favoriteNumber} 입니다. \n favoriteNumber: PropTypes.number.isRequired,"
+        }
+      </code>
+      <p>
+        favoriteNumber에는 타입설정후 isRequired가 붙어있어서 설정된 타입만
+        들어갈 수 있게 되어있다.{" "}
+      </p>
+      <div>
+        안녕하세요, 제 이름은 {name}입니다.
+        <br />
+        children 값은 {children} 입니다.
+        <br />
+        제가 좋아하는 숫자는 {favoriteNumber} 입니다.
+      </div>
+    </>
+  );
+}
+
+MyComponent7.defaultProps = {
+  name: "기본 이름",
+};
+
+MyComponent7.propTypes = {
+  name: PropTypes.string,
+  favoriteNumber: PropTypes.number.isRequired,
+};
+
+////////////////////////////////////////////////////////////
+// PropTypes을 이용한 타입 지정
+// class 내부로 지정
+class MyComponent8 extends React.Component {
+  static defaultProps = {
+    name: "기본 이름",
+  };
+  static propTypes = {
+    name: PropTypes.string,
+    favoriteNumber: PropTypes.number.isRequired,
+  };
+  render() {
+    // 비구조화 할당
+    const { name, favoriteNumber, children } = this.props;
+    return (
+      <>
+        <h2>MyComponent8</h2>
+        <code>
+          {
+            "static propTypes = {name: PropTypes.string, favoriteNumber: PropTypes.number.isRequired,};"
+          }
+        </code>
+        <p>
+          클래스형 컴포넌트에서 props 비구조할당, 타입설정, isRequired설정시
+          static으로 선언해서 사용한다.
+        </p>
+        <div>
+          안녕하세요, 제 이름은 {name}입니다.
+          <br />
+          children 값은 {children} 입니다.
+          <br />
+          제가 좋아하는 숫자는 {favoriteNumber} 입니다.
+        </div>
+      </>
+    );
+  }
 }

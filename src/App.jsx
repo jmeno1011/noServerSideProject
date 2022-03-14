@@ -4,13 +4,6 @@ import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Main, Memo, Weather } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
 import MyComponent1 from "./components/section5/MyComponent1";
-import MyComponent2 from "./components/section5/MyComponent2";
-import MyComponent3 from "./components/section5/MyComponent3";
-import MyComponent4 from "./components/section5/MyComponent4";
-import MyComponent5 from "./components/section5/MyComponent5";
-import MyComponent6 from "./components/section5/MyComponent6";
-import MyComponent7 from "./components/section5/MyComponent7";
-import MyComponent8 from "./components/section5/MyComponent8";
 import Counter from "./components/section5/Counter1";
 import Counter2 from "./components/section5/Counter2";
 import Counter3 from "./components/section5/Counter3";
@@ -61,34 +54,6 @@ function App() {
         <Route
           path="noServerSideProject/section5/"
           element={<MyComponent1 name="React" />}
-        />
-        <Route
-          path="noServerSideProject/section5-1/"
-          element={<MyComponent2 />}
-        />
-        <Route
-          path="noServerSideProject/section5-2/"
-          element={<MyComponent3>리액트</MyComponent3>}
-        />
-        <Route
-          path="noServerSideProject/section5-3/"
-          element={<MyComponent4>리액트</MyComponent4>}
-        />
-        <Route
-          path="noServerSideProject/section5-4/"
-          element={<MyComponent5>리액트</MyComponent5>}
-        />
-        <Route
-          path="noServerSideProject/section5-5/"
-          element={<MyComponent6 name={"3"}>리액트</MyComponent6>}
-        />
-        <Route
-          path="noServerSideProject/section5-6/"
-          element={<MyComponent7 favoriteNumber={3}>리액트</MyComponent7>}
-        />
-        <Route
-          path="noServerSideProject/section5-7/"
-          element={<MyComponent8 favoriteNumber={3}>리액트</MyComponent8>}
         />
         <Route path="noServerSideProject/section6-1/" element={<Counter />} />
         <Route path="noServerSideProject/section6-2/" element={<Counter2 />} />

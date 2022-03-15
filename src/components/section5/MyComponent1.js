@@ -1,6 +1,9 @@
 // 화살표 문법 확인
 import React from "react";
 import PropTypes from "prop-types";
+import "./styles.css";
+import Counter from "./Counter";
+import Say from "./Say";
 
 function MyComponent1(props) {
   const blackDog = new BlackDog();
@@ -11,6 +14,10 @@ function MyComponent1(props) {
 
   return (
     <>
+      <header className="header">
+        <h1>props 내용들</h1>
+        <a href="/noServerSideProject">홈으로</a>
+      </header>
       <div className="component">
         <h3>MyComponent1</h3>
         <code>{"<MyComponent1 name='React' /> "}</code>
@@ -45,6 +52,17 @@ function MyComponent1(props) {
       <div className="component">
         <MyComponent8 favoriteNumber={3}>리액트</MyComponent8>
       </div>
+      <hr />
+      <div className="component">
+        <h3>state 예제, class 형 컴포넌트로 작성 됨</h3>
+        <Counter />
+      </div>
+      <hr />
+      <div className="component">
+        <h3>버튼을 눌러서 state 변경되는 예제</h3>
+        <Say />
+      </div>
+      <hr />
     </>
   );
 }

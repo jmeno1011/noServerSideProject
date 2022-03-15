@@ -4,12 +4,6 @@ import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Main, Memo, Weather } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
 import MyComponent1 from "./components/section5/MyComponent1";
-import Counter from "./components/section5/Counter1";
-import Counter2 from "./components/section5/Counter2";
-import Counter3 from "./components/section5/Counter3";
-import Counter4 from "./components/section5/Counter4";
-import Say1 from "./components/section5/Say1";
-import Say2 from "./components/section5/Say2";
 import EventPractice1 from "./components/section6/EventPractice1";
 import EventPractice2 from "./components/section6/EventPractice2";
 import EventPractice3 from "./components/section6/EventPractice3";
@@ -55,12 +49,6 @@ function App() {
           path="noServerSideProject/section5/"
           element={<MyComponent1 name="React" />}
         />
-        <Route path="noServerSideProject/section6-1/" element={<Counter />} />
-        <Route path="noServerSideProject/section6-2/" element={<Counter2 />} />
-        <Route path="noServerSideProject/section6-3/" element={<Counter3 />} />
-        <Route path="noServerSideProject/section6-4/" element={<Counter4 />} />
-        <Route path="noServerSideProject/section6-5/" element={<Say1 />} />
-        <Route path="noServerSideProject/section6-6/" element={<Say2 />} />
         <Route
           path="noServerSideProject/chapter4-1/"
           element={<EventPractice1 />}

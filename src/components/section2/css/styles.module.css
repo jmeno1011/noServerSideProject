@@ -49,17 +49,16 @@
 .side__nav {
   width: 100%;
 }
-.side__nav li,
+/* .side__nav li,
 a {
-  /* width: 100%; */
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.1rem;
-  /* font-size: calc(10px + 1vmin); */
+  font-size: calc(10px + 1vmin);
   margin: 0.5rem 0;
-}
+} */
 .side__nav a:active {
   color: #6495ed;
 }

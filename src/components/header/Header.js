@@ -12,14 +12,12 @@ const Header = () => {
     main: "/noServerSideProject/main",
     weather: "/noServerSideProject/main/weather",
   };
-  //   const openNav = ()=>{
-  //       setOpen(true)
-  //       console.log(open);
-  //   }
+
   return (
     <Heeader>
       <HeaderDiv>
         <a
+          className="a-white"
           style={{ display: "flex", margin: 0, alignItems: "center" }}
           href="/noServerSideProject"
         >
@@ -38,6 +36,7 @@ const Header = () => {
             <NavLi>
               {/* section2폴더의 css .side__nav li,a에 영향을 받아서 대문자로 나옴 */}
               <Link
+                className="a-white"
                 to=""
                 style={location.pathname === nav.main ? active_color : {}}
               >
@@ -46,6 +45,7 @@ const Header = () => {
             </NavLi>
             <NavLi ml="2rem">
               <Link
+                className="a-white"
                 to="weather"
                 style={location.pathname === nav.weather ? active_color : {}}
               >

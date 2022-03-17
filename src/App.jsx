@@ -34,7 +34,7 @@ function App() {
   const imgUrl =
     "https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/404-error.svg";
   return (
-    <div className="App">
+    <>
       <Routes>
         <Route path="/noServerSideProject/" element={<Home />} />
         <Route path="noServerSideProject/about" element={<About />} />
@@ -128,7 +128,7 @@ function App() {
           }
         />
       </Routes>
-    </div>
+    </>
   );
 }
 

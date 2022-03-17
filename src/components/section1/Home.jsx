@@ -26,7 +26,11 @@ export function Home() {
                   </Link>
                 </p>
                 <p>
-                  <a href="/noServerSideProject" onClick={onClickSignOut} className="a-white">
+                  <a
+                    href="/noServerSideProject"
+                    onClick={onClickSignOut}
+                    className="a-white"
+                  >
                     Sign Out
                   </a>
                 </p>
@@ -65,7 +69,6 @@ export function Home() {
         >
           Learn React
         </a>
-        <Outlet />
       </header>
     </>
   );

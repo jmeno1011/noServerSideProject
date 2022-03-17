@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./css/styles.module.css"
+import styles from "./css/styles.module.css";
 
 export function About() {
   return (
@@ -9,7 +9,9 @@ export function About() {
         <p>That feels like an existential question, don't you think?</p>
       </main>
       <nav>
-        <Link to="/noServerSideProject" className="a-white">Home</Link>
+        <Link to="/noServerSideProject" className="a-white">
+          👉Home
+        </Link>
       </nav>
     </div>
   );

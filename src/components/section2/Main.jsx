@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import Header from "../header/Header";
 import styles from "./css/styles.module.css";
 
 export function Main() {
@@ -11,7 +12,8 @@ export function Main() {
 
   return (
     <>
-      <div className={styles.header}>
+      <Header />
+      {/* <div className={styles.header}>
         <Link to="/noServerSideProject">
           <h2>home</h2>
         </Link>
@@ -39,7 +41,7 @@ export function Main() {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
 
       <div className={styles.app}>
         <div className={styles.app__left}>

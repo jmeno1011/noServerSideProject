@@ -19,7 +19,7 @@ function MyComponent1(props) {
         <a href="/noServerSideProject">홈으로</a>
       </header>
       <div className="component">
-        <h3>MyComponent1</h3>
+        <h2>MyComponent1</h2>
         <code>{"<MyComponent1 name='React' /> "}</code>
         <p>name에서 props.name값을 받아서 React 출력됨</p>
         <div>안녕하세요, 제 이름은 {props.name}입니다.</div>

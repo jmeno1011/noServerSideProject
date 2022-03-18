@@ -6,6 +6,7 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #15171c;
 }
 
 code {
@@ -21,9 +22,7 @@ ul {
 a {
   text-decoration: none;
 }
-.a-white {
-  color: white;
-}
+
 *,
 ::before,
 ::after {
@@ -33,6 +32,12 @@ code {
   display: block;
   padding: 1rem;
   background: gray;
+  color: white;
+}
+#root {
+  min-height: 100vh;
+}
+.a-white {
   color: white;
 }
 .component {

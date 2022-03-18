@@ -42,6 +42,12 @@ export function Memo() {
       </p>
       <p>공부할 내용 + SEO 관련 찾아보기</p>
       <p>공부할 내용1 + elasticsearch이 뭔지 알아보기</p>
+      <p>
+        멍개님 블로그 보면서 공부하기 <br />
+        https://blog.naver.com/pjt3591oo/222676339976
+        <br />
+        https://github.com/pjt3591oo/react-hook-zustand
+      </p>
       {/* </div> */}
     </>
   );

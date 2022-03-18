@@ -10,6 +10,7 @@ const Header = () => {
   const location = useLocation();
   const nav = {
     main: "/noServerSideProject/main",
+    section5: "/noServerSideProject/section5",
     weather: "/noServerSideProject/main/weather",
   };
 
@@ -21,7 +22,7 @@ const Header = () => {
           style={{ display: "flex", margin: 0, alignItems: "center" }}
           href="/noServerSideProject"
         >
-          <LogoImg src={logo} />
+          <LogoImg src={logo} alt="logo" />
           <LogoSpan>HOME</LogoSpan>
         </a>
         <HamburgerBtn onClick={() => (open ? setOpen(false) : setOpen(true))}>
@@ -46,13 +47,20 @@ const Header = () => {
             <NavLi ml="2rem">
               <Link
                 className="a-white"
-                to="weather"
-                style={location.pathname === nav.weather ? active_color : {}}
+                to="section5"
+                style={location.pathname === nav.section5 ? active_color : {}}
               >
                 Resources
               </Link>
             </NavLi>
-            <NavLi ml="2rem">GitHub</NavLi>
+            <NavLi ml="2rem">
+              <a
+                href="https://github.com/jmeno1011/noServerSideProject"
+                target={"_blank"}
+              >
+                GitHub
+              </a>
+            </NavLi>
             <NavLi ml="2rem">etc</NavLi>
           </NavUl>
         </Nav>
@@ -77,6 +85,7 @@ const HeaderDiv = styled.div`
 
 const LogoImg = styled.img`
   width: 36px;
+  height: 36px;
   border-radius: 70%;
 `;
 
@@ -111,6 +120,7 @@ const Nav = styled.nav`
     top: 86px;
     left: 0;
     right: 0;
+    z-index: 10;
   }
 `;
 const NavUl = styled.ul`
@@ -125,5 +135,8 @@ const NavLi = styled.li`
   margin-left: ${(props) => props.ml};
   @media only screen and (max-width: 768px) {
     margin: 1rem;
+  }
+  > a {
+    color: white;
   }
 `;

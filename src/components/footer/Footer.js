@@ -7,7 +7,9 @@ const Footer = () => {
     <Foooter>
       <FooterDiv>
         <div>
-          <a style={{ fontSize: "1.625rem" }}>Footer</a>
+          <a style={{ fontSize: "1.625rem" }} href="#">
+            Footer
+          </a>
           <div style={{ marginTop: 24 }}>
             <DesP>React Project and Examples</DesP>
             <DesP>Code Examples and documentation CC 1.0</DesP>
@@ -20,18 +22,23 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <ul style={{ display: "flex", alignItems: "center" }}>
+          <FooterUl>
             <li>
-              <a>
+              <a
+                href="https://github.com/jmeno1011/noServerSideProject"
+                target={"_blank"}
+              >
+                <span>GitHub</span>
                 <Icon icon="ant-design:github-filled" fontSize={40} />
               </a>
             </li>
             <li style={{ marginLeft: 24 }}>
-              <a>
+              <a href="#">
+                <span>Twitter</span>
                 <Icon icon="ant-design:twitter-circle-filled" fontSize={40} />
               </a>
             </li>
-          </ul>
+          </FooterUl>
           <p style={{ marginTop: 32, marginBottom: 0 }}>&copy; 2022 Remix</p>
         </div>
       </FooterDiv>
@@ -51,7 +58,27 @@ const FooterDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  > div > a {
+    color: white;
+  }
 `;
 const DesP = styled.div`
   margin: 0;
+`;
+
+const FooterUl = styled.ul`
+  display: flex;
+  align-items: center;
+  > li > a {
+    color: gray;
+  }
+  > li > a :hover {
+    color: white;
+  }
+  > li > a > span {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+  }
 `;

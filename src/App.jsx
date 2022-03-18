@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
-import { Main, Memo, Weather } from "./components/section2";
+import { Main, Memo, Weather, Layout } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
 import MyComponent1 from "./components/section5/MyComponent1";
 import EventPractice1 from "./components/section6/EventPractice1";
@@ -28,6 +28,7 @@ import { SassComponent } from "./components/section11/SassComponent";
 import Immer from "./components/section12/Immer";
 import Immer2 from "./components/section12/Immer2";
 import Immer3 from "./components/section12/Immer3";
+import Test from "./components/section2/Test";
 
 function App() {
   let navigate = useNavigate();
@@ -40,15 +41,14 @@ function App() {
         <Route path="noServerSideProject/about" element={<About />} />
         <Route path="noServerSideProject/sign-up" element={<SignUp />} />
         <Route path="noServerSideProject/sign-in" element={<SignIn />} />
-        <Route path="noServerSideProject/main/" element={<Main />}>
+        <Route path="noServerSideProject/main/" element={<Layout />}>
           <Route path="weather" element={<Weather />} />
+          <Route index element={<Memo />} />
           <Route path="memo" element={<Memo />} />
           <Route path="dom-select" element={<DomSelect />} />
+          <Route path="test" element={<Test />} />
+          <Route path="section5" element={<MyComponent1 name="React" />} />
         </Route>
-        <Route
-          path="noServerSideProject/section5/"
-          element={<MyComponent1 name="React" />}
-        />
         <Route
           path="noServerSideProject/chapter4-1/"
           element={<EventPractice1 />}

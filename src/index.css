@@ -38,3 +38,15 @@ code {
 .component {
   padding: 0.5rem;
 }
+.side-nav {
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: #4d4d4d;
+  font-size: 1rem;
+  line-height: 1.125;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}

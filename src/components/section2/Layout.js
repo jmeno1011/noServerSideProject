@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
+import styled from "styled-components";
+import { Icon } from "@iconify/react";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
 export const Layout = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleFollow = () => {
+    setScrollY(window.pageYOffset); // window 스크롤 값을 ScrollY에 저장
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setScrollY(0);
+  };
+
+  useEffect(() => {
+    const watch = () => {
+      window.addEventListener("scroll", handleFollow);
+    };
+    watch(); // addEventListener 함수를 실행
+    return () => {
+      window.removeEventListener("scroll", handleFollow); // addEventListener 함수를 삭제
+    };
+  });
   return (
     <>
       <div>
@@ -92,8 +114,32 @@ export const Layout = () => {
         </div>
       </div>
       <Footer />
+      <TopBtn scrollY={scrollY} onClick={scrollTop}>
+        <Icon icon="bytesize:arrow-top" />
+      </TopBtn>
     </>
   );
 };
 
 // export default Layout;
+
+const TopBtn = styled.button`
+  visibility: ${(props) => (props.scrollY > 100 ? "visible" : "hidden")};
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  outline: none;
+  padding: 6px;
+  border-width: 0;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  svg {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  :hover {
+    background-color: rgb(217, 215, 215);
+  }
+`;

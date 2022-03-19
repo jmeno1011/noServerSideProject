@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import "./styles.css";
 import Counter from "./Counter";
 import Say from "./Say";
+import { Icon } from "@iconify/react";
+import { ContentTitle, HeaderTitle } from "./titleLink";
 
 function MyComponent1(props) {
   const blackDog = new BlackDog();
@@ -14,12 +16,15 @@ function MyComponent1(props) {
 
   return (
     <>
-      <header className="header">
-        <h1>props 내용들</h1>
-        <a href="/noServerSideProject">홈으로</a>
+      <header>
+        <Title
+          Component={HeaderTitle}
+          id={"chapter3_title"}
+          title={"Props 내용들"}
+        />
       </header>
       <div className="component">
-        <h2>MyComponent1</h2>
+        <Title Component={ContentTitle} id={"MyComponent1"} />
         <code>{"<MyComponent1 name='React' /> "}</code>
         <p>name에서 props.name값을 받아서 React 출력됨</p>
         <div>안녕하세요, 제 이름은 {props.name}입니다.</div>
@@ -69,6 +74,19 @@ function MyComponent1(props) {
 
 export default MyComponent1;
 
+const Title = ({ Component, id, title }) => {
+  return (
+    <>
+      <Component id={id}>
+        <a href={`#${id}`}>
+          <Icon icon="akar-icons:link-chain" />
+        </a>
+        {title ? title : id}
+      </Component>
+    </>
+  );
+};
+
 function BlackDog() {
   this.name = "흰둥이";
   return {
@@ -95,7 +113,7 @@ function WhiteDog() {
 function MyComponent2(props) {
   return (
     <>
-      <h2>MyComponent2</h2>
+      <Title Component={ContentTitle} id={"MyComponent2"} />
       <code>{"MyComponent2.defaultProps = {name: '기본 이름' };"}</code>
       <p>defaultProps를 이용해 props.name을 적용 할 수 도 있음</p>
       <div>안녕하세요, 제 이름은 {props.name}입니다.</div>
@@ -111,7 +129,7 @@ MyComponent2.defaultProps = {
 function MyComponent3(props) {
   return (
     <>
-      <h2>MyComponent3</h2>
+      <Title Component={ContentTitle} id={"MyComponent3"} />
       <code>{"<MyComponent3>리액트</MyComponent3>"}</code>
       <p>
         MyComponent3의 컴포넌트 사이에 있는 리액트를 props.children으로 불러올수
@@ -128,7 +146,7 @@ function MyComponent4(props) {
   const { name, children } = props;
   return (
     <>
-      <h2>MyComponent4</h2>
+      <Title Component={ContentTitle} id={"MyComponent4"} />
       <code>{"const {name, children} = props;"}</code>
       <p>비구조 할당으로 선언하면 props를 생략 가능</p>
       <div>
@@ -148,7 +166,7 @@ MyComponent4.defaultProps = {
 function MyComponent5({ name, children }) {
   return (
     <>
-      <h2>MyComponent5</h2>
+      <Title Component={ContentTitle} id={"MyComponent5"} />
       <code>{"MyComponent5({name, children})"}</code>
       <p>함수형 컴포넌트 선언시 () 안의 대괄호에 넣어서 비구조 할당 </p>
       <div>
@@ -169,7 +187,7 @@ MyComponent5.defaultProps = {
 function MyComponent6({ name, children }) {
   return (
     <>
-      <h2>MyComponent6</h2>
+      <Title Component={ContentTitle} id={"MyComponent6"} />
       <code>
         {
           "MyComponent6.propTypes = {name: PropTypes.string,};\n<MyComponent6 name={'3'}>리액트</MyComponent6>"
@@ -201,7 +219,7 @@ MyComponent6.propTypes = {
 function MyComponent7({ name, favoriteNumber, children }) {
   return (
     <>
-      <h2>MyComponent7</h2>
+      <Title Component={ContentTitle} id={"MyComponent7"} />
       <code>
         {
           "제가 좋아하는 숫자는 {favoriteNumber} 입니다. \n favoriteNumber: PropTypes.number.isRequired,"
@@ -247,7 +265,7 @@ class MyComponent8 extends React.Component {
     const { name, favoriteNumber, children } = this.props;
     return (
       <>
-        <h2>MyComponent8</h2>
+        <Title Component={ContentTitle} id={"MyComponent8"} />
         <code>
           {
             "static propTypes = {name: PropTypes.string, favoriteNumber: PropTypes.number.isRequired,};"

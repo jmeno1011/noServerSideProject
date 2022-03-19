@@ -69,6 +69,16 @@ export const Layout = () => {
                         test
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        // className="a-white"
+                        className="side-nav"
+                        to="chapter3"
+                        style={{ paddingBottom: 4, marginBottom: 8 }}
+                      >
+                        리다기 3장
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
               </div>

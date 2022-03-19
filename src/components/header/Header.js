@@ -47,7 +47,7 @@ const Header = () => {
             <NavLi ml="2rem">
               <Link
                 className="a-white"
-                to="section5"
+                to="#"
                 style={location.pathname === nav.section5 ? active_color : {}}
               >
                 Resources

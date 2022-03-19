@@ -3,7 +3,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Main, Memo, Weather, Layout } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
-import MyComponent1 from "./components/section5/MyComponent1";
+import MyComponent1 from "./components/chapter3/MyComponent";
 import EventPractice1 from "./components/section6/EventPractice1";
 import EventPractice2 from "./components/section6/EventPractice2";
 import EventPractice3 from "./components/section6/EventPractice3";
@@ -47,7 +47,7 @@ function App() {
           <Route path="memo" element={<Memo />} />
           <Route path="dom-select" element={<DomSelect />} />
           <Route path="test" element={<Test />} />
-          <Route path="section5" element={<MyComponent1 name="React" />} />
+          <Route path="chapter3" element={<MyComponent1 name="React" />} />
         </Route>
         <Route
           path="noServerSideProject/chapter4-1/"

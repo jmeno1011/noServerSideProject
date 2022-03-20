@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 class EventPractice6 extends Component {
   state = {
@@ -28,8 +30,8 @@ class EventPractice6 extends Component {
   render() {
     return (
       <div>
-        <h1>EventPractice</h1>
-        <h2>4-5에서 onKeyPress를 추가 </h2>
+        <Title Component={ContentTitle} id={"EventPractice6"} />
+        <p>4-5에서 onKeyPress를 추가 </p>
         <p>
           세부 내용: alert확인후 setState함수를 통해 input의 value(state)값
           초기화

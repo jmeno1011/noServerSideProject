@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 class EventPractice2 extends Component {
   state = {
@@ -7,8 +9,8 @@ class EventPractice2 extends Component {
   render() {
     return (
       <div>
-        <h1>EventPractice</h1>
-        <h2>text박스에 입력후 state로 받은 값을 버튼클릭 후 alert으로 확인</h2>
+        <Title Component={ContentTitle} id={"EventPractice2"} />
+        <p>text박스에 입력후 state로 받은 값을 버튼클릭 후 alert으로 확인</p>
         <input
           type={"text"}
           name="message"

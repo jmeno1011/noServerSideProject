@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 class EventPractice1 extends Component {
   render() {
     return (
       <div>
-        <h1>EventPractice</h1>
-        <h2>
+        <Title Component={ContentTitle} id={"EventPractice1"} />
+        <p>
           text박스에 입력시 e.target.value를 통해 console.log에서 값 확인하기
-        </h2>
+        </p>
         <input
           type={"text"}
           name="message"

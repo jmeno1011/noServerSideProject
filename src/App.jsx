@@ -3,7 +3,6 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Main, Memo, Weather, Layout } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
-import MyComponent1 from "./components/chapter3/MyComponent";
 import EventPractice1 from "./components/section6/EventPractice1";
 import EventPractice2 from "./components/section6/EventPractice2";
 import EventPractice3 from "./components/section6/EventPractice3";
@@ -29,6 +28,8 @@ import Immer from "./components/section12/Immer";
 import Immer2 from "./components/section12/Immer2";
 import Immer3 from "./components/section12/Immer3";
 import Test from "./components/section2/Test";
+import MyComponent from "./components/chapter3/MyComponent";
+import Chapter4 from "./components/section6/Chapter4";
 
 function App() {
   let navigate = useNavigate();
@@ -47,7 +48,8 @@ function App() {
           <Route path="memo" element={<Memo />} />
           <Route path="dom-select" element={<DomSelect />} />
           <Route path="test" element={<Test />} />
-          <Route path="chapter3" element={<MyComponent1 name="React" />} />
+          <Route path="chapter3" element={<MyComponent />} />
+          <Route path="chapter4" element={<Chapter4 />} />
         </Route>
         <Route
           path="noServerSideProject/chapter4-1/"

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 // EventPractice6을 함수형 컴포넌트로 변경
 function EventPractice7() {
@@ -18,8 +20,8 @@ function EventPractice7() {
   };
   return (
     <div>
-      <h1>EventPractice</h1>
-      <h2>4-6(클래스형 컴포넌트)를 함수형 컴포넌트로 변경</h2>
+      <Title Component={ContentTitle} id={"EventPractice7"} />
+      <p>4-6(클래스형 컴포넌트)를 함수형 컴포넌트로 변경</p>
       <input
         type={"text"}
         name="username"

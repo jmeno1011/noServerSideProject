@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 class EventPractice3 extends Component {
   state = {
@@ -25,11 +27,11 @@ class EventPractice3 extends Component {
   render() {
     return (
       <div>
-        <h1>EventPractice</h1>
-        <h2>
+        <Title Component={ContentTitle} id={"EventPractice3"} />
+        <p>
           class형 component에서 constructor에서 함수 선언해서 사용하기
           this.함수명.bind(this) 형태
-        </h2>
+        </p>
         <input
           type={"text"}
           name="message"

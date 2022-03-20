@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 class EventPractice5 extends Component {
   state = {
@@ -32,10 +34,10 @@ class EventPractice5 extends Component {
   render() {
     return (
       <div>
-        <h1>EventPractice</h1>
-        <h2>
+        <Title Component={ContentTitle} id={"EventPractice5"} />
+        <p>
           es6비구조 할당을 이용해서 e.target.value, e.target.name 값 가져오기{" "}
-        </h2>
+        </p>
         <input
           type={"text"}
           name="username"

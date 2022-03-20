@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 class EventPractice4 extends Component {
   state = {
@@ -20,11 +22,11 @@ class EventPractice4 extends Component {
   render() {
     return (
       <div>
-        <h1>EventPractice</h1>
-        <h2>
+        <Title Component={ContentTitle} id={"EventPractice4"} />
+        <p>
           class형 component에서 constructor없이 함수를 화살표 함수로 선언 후
           사용하기 (bind() 생략가능)
-        </h2>
+        </p>
         <input
           type={"text"}
           name="message"

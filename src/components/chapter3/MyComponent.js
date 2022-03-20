@@ -6,8 +6,9 @@ import Counter from "./Counter";
 import Say from "./Say";
 import { Icon } from "@iconify/react";
 import { ContentTitle, HeaderTitle } from "./titleLink";
+import Title from "../Title";
 
-function MyComponent1(props) {
+function MyComponent(props) {
   const blackDog = new BlackDog();
   blackDog.bark();
 
@@ -24,10 +25,7 @@ function MyComponent1(props) {
         />
       </header>
       <div className="component">
-        <Title Component={ContentTitle} id={"MyComponent1"} />
-        <code>{"<MyComponent1 name='React' /> "}</code>
-        <p>name에서 props.name값을 받아서 React 출력됨</p>
-        <div>안녕하세요, 제 이름은 {props.name}입니다.</div>
+        <MyComponent1 name="React" />
       </div>
       <hr />
       <div className="component">
@@ -72,17 +70,15 @@ function MyComponent1(props) {
   );
 }
 
-export default MyComponent1;
+export default MyComponent;
 
-const Title = ({ Component, id, title }) => {
+const MyComponent1 = (props) => {
   return (
     <>
-      <Component id={id}>
-        <a href={`#${id}`}>
-          <Icon icon="akar-icons:link-chain" />
-        </a>
-        {title ? title : id}
-      </Component>
+      <Title Component={ContentTitle} id={"MyComponent1"} />
+      <code>{"<MyComponent1 name='React' /> "}</code>
+      <p>name에서 props.name값을 받아서 React 출력됨</p>
+      <div>안녕하세요, 제 이름은 {props.name}입니다.</div>
     </>
   );
 };

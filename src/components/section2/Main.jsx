@@ -86,27 +86,6 @@ export function Main() {
             </div>
           </div>
         </div>
-        {/* <div className={styles.app}>
-          <div className={styles.app__left}>
-            <nav className={styles.side__nav}>
-              <ul>
-                <li>
-                  <Link to="weather">weather</Link>
-                </li>
-                <li>
-                  <Link to="memo">memo</Link>
-                </li>
-                <li>
-                  <Link to="dom-select">dom-select</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div className={styles.vertical__hr}></div>
-          <div className={styles.app__right}>
-            <Outlet />
-          </div>
-        </div> */}
       </div>
       <Footer />
     </>

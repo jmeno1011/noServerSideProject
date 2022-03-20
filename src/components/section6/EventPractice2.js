@@ -8,6 +8,7 @@ class EventPractice2 extends Component {
     return (
       <div>
         <h1>EventPractice</h1>
+        <h2>text박스에 입력후 state로 받은 값을 버튼클릭 후 alert으로 확인</h2>
         <input
           type={"text"}
           name="message"

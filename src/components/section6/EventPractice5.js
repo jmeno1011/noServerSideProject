@@ -13,7 +13,7 @@ class EventPractice5 extends Component {
       // const object = {
       //   [name] : 'value'
       // }
-      // object 호출시 
+      // object 호출시
       // => {
       //   "홍길동" : 'value'
       // }
@@ -33,6 +33,9 @@ class EventPractice5 extends Component {
     return (
       <div>
         <h1>EventPractice</h1>
+        <h2>
+          es6비구조 할당을 이용해서 e.target.value, e.target.name 값 가져오기{" "}
+        </h2>
         <input
           type={"text"}
           name="username"

@@ -115,7 +115,7 @@ function App() {
         <Route
           path="*"
           element={
-            <main style={{ padding: "1rem" }}>
+            <main style={{ padding: "1rem", color: "white" }}>
               <p>There's nothing here!</p>
               <img
                 className="img-404"

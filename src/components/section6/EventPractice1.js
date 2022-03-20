@@ -5,6 +5,9 @@ class EventPractice1 extends Component {
     return (
       <div>
         <h1>EventPractice</h1>
+        <h2>
+          text박스에 입력시 e.target.value를 통해 console.log에서 값 확인하기
+        </h2>
         <input
           type={"text"}
           name="message"

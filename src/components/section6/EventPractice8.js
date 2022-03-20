@@ -31,6 +31,10 @@ function EventPractice8() {
   return (
     <div>
       <h1>EventPractice</h1>
+      <h2>
+        state를 각각의 문자열 객체로 다루는 것이 아닌 object형식으로 묶어서
+        한번에 상태관리함
+      </h2>
       <input
         type={"text"}
         name="username"

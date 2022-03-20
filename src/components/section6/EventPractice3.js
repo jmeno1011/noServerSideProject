@@ -26,6 +26,10 @@ class EventPractice3 extends Component {
     return (
       <div>
         <h1>EventPractice</h1>
+        <h2>
+          class형 component에서 constructor에서 함수 선언해서 사용하기
+          this.함수명.bind(this) 형태
+        </h2>
         <input
           type={"text"}
           name="message"

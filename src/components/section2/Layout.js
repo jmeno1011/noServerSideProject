@@ -101,6 +101,16 @@ export const Layout = () => {
                         리다기 3장
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        // className="a-white"
+                        className="side-nav"
+                        to="chapter4"
+                        style={{ paddingBottom: 4, marginBottom: 8 }}
+                      >
+                        리다기 4장
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -121,8 +131,6 @@ export const Layout = () => {
   );
 };
 
-// export default Layout;
-
 const TopBtn = styled.button`
   visibility: ${(props) => (props.scrollY > 100 ? "visible" : "hidden")};
   position: fixed;
@@ -139,7 +147,7 @@ const TopBtn = styled.button`
     font-size: 1rem;
     font-weight: 700;
   }
-  :hover {
+  &:hover {
     background-color: rgb(217, 215, 215);
   }
 `;

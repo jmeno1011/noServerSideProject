@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./css/styles.module.css";
 import { Icon } from "@iconify/react";
 
 export function Weather() {
@@ -35,67 +34,82 @@ export function Weather() {
   return (
     <>
       <div>
-        <div
-          style={{
-            display: "flex",
-            // background: "white",
-            border: "1px solid rgba(0,0,0,.06)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              fontSize: "45px",
-              color: "darkred",
-              border: "1px solid rgba(0,0,0,.06)",
-            }}
-          >
-            <Icon icon="el:map-marker" />
-          </div>
-          <div>
-            <p style={{ margin: "0.5rem" }}>위도 : {location.lat}</p>
-            <p style={{ margin: "0.5rem" }}>경도 : {location.lon}</p>
-          </div>
-        </div>
-
         {data && data ? (
           <>
             <div
               style={{
                 display: "flex",
-                background: "#00A6CA",
+                flexDirection: "column",
+                background: "rgb(109 213 235)",
                 padding: "0.5rem 0.8rem",
                 borderRadius: "1rem",
+                alignItems: "center",
               }}
             >
-              <div style={{ width: "150px" }}>
-                <h1 style={{ margin: 0, marginTop: "1rem" }}>
-                  {Math.round(data.main.feels_like - 273.15)}℃
-                </h1>
-                <p style={{ margin: 0 }}>{data.weather[0].description}</p>
+              <div>{data.name}</div>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-around",
+                }}
+              >
+                <div style={{ width: "150px" }}>
+                  <h1 style={{ margin: 0, marginTop: "1rem" }}>
+                    {Math.round(data.main.temp - 273.15)}℃
+                  </h1>
+                  <p style={{ margin: 0 }}>{data.weather[0].description}</p>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: "0.75rem",
+                      letterSpacing: "0.7px",
+                      fontWeight: "700",
+                      color: "rgba(0,0,0,0.7)",
+                    }}
+                  >
+                    humidity: {data.main.humidity}%
+                  </p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+                    alt=""
+                  />
+                </div>
               </div>
               <div
                 style={{
-                  fontSize: "70px",
+                  width: "100%",
                   display: "flex",
                   alignItems: "center",
                 }}
               >
-                {data.weather[0].main === "Clouds" ? (
-                  <Icon icon="akar-icons:cloud" />
-                ) : (
-                  ""
-                )}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: "1.5rem",
+                    color: "darkred",
+                  }}
+                >
+                  <Icon icon="el:map-marker" />
+                </div>
+                {/* <div> */}
+                <p style={{ margin: "0.5rem" }}>lat : {location.lat}</p>/
+                <p style={{ margin: "0.5rem" }}>lon : {location.lon}</p>
+                {/* </div> */}
               </div>
             </div>
-            <p>위치 : {data.name}</p>
-            <p>체감온도 : </p>
-            <p>현재기온 : {Math.round(data.main.temp - 273.15)}℃</p>
+            <p>체감온도 : {Math.round(data.main.feels_like - 273.15)}℃ </p>
             <p>습도 : {data.main.humidity}%</p>
-            <p>날씨 : {data.weather[0].main}</p>
-            <p>날씨 설명 : {data.weather[0].description}</p>
-            {data.weather[0].icon}
+            <p>최저 온도: {Math.round(data.main.temp_min - 273.15)}℃</p>
+            <p>최저 온도: {Math.round(data.main.temp_max - 273.15)}℃</p>
           </>
         ) : (
           ""

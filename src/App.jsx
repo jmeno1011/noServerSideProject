@@ -1,19 +1,8 @@
 import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
-import { Main, Memo, Weather, Layout } from "./components/section2";
+import { Memo, Weather, Layout } from "./components/section2";
 import DomSelect from "./components/section3/DomSelect";
-import EventPractice1 from "./components/chapter4/EventPractice1";
-import EventPractice2 from "./components/chapter4/EventPractice2";
-import EventPractice3 from "./components/chapter4/EventPractice3";
-import EventPractice4 from "./components/chapter4/EventPractice4";
-import EventPractice5 from "./components/chapter4/EventPractice5";
-import EventPractice6 from "./components/chapter4/EventPractice6";
-import EventPractice7 from "./components/chapter4/EventPractice7";
-import EventPractice8 from "./components/chapter4/EventPractice8";
-import CompoRender from "./components/section7/CompoRender";
-import RefPractice from "./components/section7/RefPractice";
-import Chapter5 from "./components/section7/Chapter5";
 import { IterationSample1 } from "./components/section8/IterationSample1";
 import { IterationSample2 } from "./components/section8/IterationSample2";
 import LifeCycle from "./components/section9/LifeCycle";
@@ -30,6 +19,7 @@ import Immer3 from "./components/section12/Immer3";
 import Test from "./components/section2/Test";
 import MyComponent from "./components/chapter3/MyComponent";
 import Chapter4 from "./components/chapter4/Chapter4";
+import Chapter5 from "./components/chapter5/Chapter5";
 
 function App() {
   let navigate = useNavigate();
@@ -50,48 +40,8 @@ function App() {
           <Route path="test" element={<Test />} />
           <Route path="chapter3" element={<MyComponent />} />
           <Route path="chapter4" element={<Chapter4 />} />
+          <Route path="chapter5" element={<Chapter5 />} />
         </Route>
-        <Route
-          path="noServerSideProject/chapter4-1/"
-          element={<EventPractice1 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-2/"
-          element={<EventPractice2 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-3/"
-          element={<EventPractice3 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-4/"
-          element={<EventPractice4 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-5/"
-          element={<EventPractice5 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-6/"
-          element={<EventPractice6 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-7/"
-          element={<EventPractice7 />}
-        />
-        <Route
-          path="noServerSideProject/chapter4-8/"
-          element={<EventPractice8 />}
-        />
-        <Route
-          path="noServerSideProject/chapter5-1/"
-          element={<CompoRender />}
-        />
-        <Route
-          path="noServerSideProject/chapter5-2/"
-          element={<RefPractice />}
-        />
-        <Route path="noServerSideProject/chapter5-3/" element={<Chapter5 />} />
         <Route
           path="noServerSideProject/chapter6-1/"
           element={<IterationSample1 />}
@@ -125,6 +75,7 @@ function App() {
                 onClick={() => {
                   navigate("/noServerSideProject");
                 }}
+                alt="404 not found"
               />
             </main>
           }

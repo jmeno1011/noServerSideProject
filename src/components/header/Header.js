@@ -129,6 +129,7 @@ const NavUl = styled.ul`
   font-size: 1rem;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
+    width: 100%;
   }
 `;
 const NavLi = styled.li`

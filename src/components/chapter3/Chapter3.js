@@ -4,11 +4,10 @@ import PropTypes from "prop-types";
 import "./styles.css";
 import Counter from "./Counter";
 import Say from "./Say";
-import { Icon } from "@iconify/react";
 import { ContentTitle, HeaderTitle } from "./titleLink";
 import Title from "../Title";
 
-function MyComponent(props) {
+function Chapter3() {
   const blackDog = new BlackDog();
   blackDog.bark();
 
@@ -70,7 +69,7 @@ function MyComponent(props) {
   );
 }
 
-export default MyComponent;
+export default Chapter3;
 
 const MyComponent1 = (props) => {
   return (

@@ -15,20 +15,3 @@
 .header > a:hover {
   color: aquamarine;
 }
-/* #chapter3_title {
-  position: relative;
-  margin: 0;
-}
-#chapter3_title > a {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: -1.5rem;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-#chapter3_title > a > svg {
-  display: none;
-} */

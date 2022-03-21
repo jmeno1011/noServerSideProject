@@ -10,6 +10,7 @@ const Header = () => {
   const location = useLocation();
   const nav = {
     main: "/noServerSideProject/main",
+    memo: "/noServerSideProject/main/memo",
     section5: "/noServerSideProject/section5",
     weather: "/noServerSideProject/main/weather",
   };
@@ -39,7 +40,9 @@ const Header = () => {
               <Link
                 className="a-white"
                 to=""
-                style={location.pathname === nav.main ? active_color : {}}
+                style={
+                  location.pathname === nav.main || nav.memo ? active_color : {}
+                }
               >
                 Documentation
               </Link>

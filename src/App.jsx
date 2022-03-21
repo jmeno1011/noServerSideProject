@@ -17,7 +17,7 @@ import Immer from "./components/section12/Immer";
 import Immer2 from "./components/section12/Immer2";
 import Immer3 from "./components/section12/Immer3";
 import Test from "./components/section2/Test";
-import MyComponent from "./components/chapter3/MyComponent";
+import Chapter3 from "./components/chapter3/Chapter3";
 import Chapter4 from "./components/chapter4/Chapter4";
 import Chapter5 from "./components/chapter5/Chapter5";
 
@@ -38,7 +38,7 @@ function App() {
           <Route path="memo" element={<Memo />} />
           <Route path="dom-select" element={<DomSelect />} />
           <Route path="test" element={<Test />} />
-          <Route path="chapter3" element={<MyComponent />} />
+          <Route path="chapter3" element={<Chapter3 />} />
           <Route path="chapter4" element={<Chapter4 />} />
           <Route path="chapter5" element={<Chapter5 />} />
         </Route>

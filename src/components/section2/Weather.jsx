@@ -75,7 +75,19 @@ export function Weather() {
                 </h1>
                 <p style={{ margin: 0 }}>{data.weather[0].description}</p>
               </div>
-              <div>{data.weather[0].main}</div>
+              <div
+                style={{
+                  fontSize: "70px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                {data.weather[0].main === "Clouds" ? (
+                  <Icon icon="akar-icons:cloud" />
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
             <p>위치 : {data.name}</p>
             <p>체감온도 : </p>

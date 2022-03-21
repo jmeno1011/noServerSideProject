@@ -57,6 +57,7 @@ const Header = () => {
               <a
                 href="https://github.com/jmeno1011/noServerSideProject"
                 target={"_blank"}
+                rel="noopener noreferrer"
               >
                 GitHub
               </a>

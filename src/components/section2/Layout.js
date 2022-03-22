@@ -28,109 +28,112 @@ export const Layout = () => {
   });
   return (
     <>
-      <div>
+      <div style={{display:'flex', flexDirection:'column', flex:'1 1 0%'}}>
         <Header />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            background: "rgb(208 219 241)",
-          }}
-        >
-          <div style={{ display: "flex" }}>
-            <div style={{ borderRight: "1px solid white" }}>
-              <div
-                style={{
-                  padding: "2.5rem 0.75rem 2.5rem 1.5rem",
-                  overflowX: "hidden",
-                  overflowY: "auto",
-                  width: "16rem",
-                  maxHeight: "100vh",
-                  height: "100%",
-                  position: "sticky",
-                }}
-              >
-                <nav>
-                  <ul>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="memo"
-                      >
-                        ⭐memo
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="weather"
-                        style={{ paddingBottom: 4, marginBottom: 8 }}
-                      >
-                        weather
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="dom-select"
-                        style={{ paddingBottom: 4, marginBottom: 8 }}
-                      >
-                        dom-select
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="test"
-                        style={{ paddingBottom: 4, marginBottom: 8 }}
-                      >
-                        test
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="chapter3"
-                        style={{ paddingBottom: 4, marginBottom: 8 }}
-                      >
-                        리다기 3장
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="chapter4"
-                        style={{ paddingBottom: 4, marginBottom: 8 }}
-                      >
-                        리다기 4장
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        // className="a-white"
-                        className="side-nav"
-                        to="chapter5"
-                        style={{ paddingBottom: 4, marginBottom: 8 }}
-                      >
-                        리다기 5장
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <div style={{ height: "100%" }}>
-              <div style={{ padding: "2.5rem 1.5rem 2.5rem 0.75rem" }}>
-                <Outlet />
-              </div>
-            </div>
-          </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <LayoutWrapper>
+            <Wrapper>
+              <SmallNav>
+                <details>
+                  <summary>Docs Navigation</summary>
+                  <div></div>
+                </details>
+                <hr />
+              </SmallNav>
+              <SideNav>
+                <div
+                  style={{
+                    padding: "2.5rem 0.75rem 2.5rem 1.5rem",
+                    overflowX: "hidden",
+                    overflowY: "auto",
+                    width: "16rem",
+                    maxHeight: "100vh",
+                    height: "100%",
+                    position: "sticky",
+                  }}
+                >
+                  <nav>
+                    <ul>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="memo"
+                        >
+                          ⭐memo
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="weather"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          weather
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="dom-select"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          dom-select
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="test"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          test
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="chapter3"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          리다기 3장
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="chapter4"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          리다기 4장
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="chapter5"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          리다기 5장
+                        </Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </SideNav>
+              <ContentWrapper>
+                <Content>
+                  <Outlet />
+                </Content>
+              </ContentWrapper>
+            </Wrapper>
+          </LayoutWrapper>
         </div>
       </div>
       <Footer />
@@ -159,5 +162,71 @@ const TopBtn = styled.button`
   }
   &:hover {
     background-color: rgb(217, 215, 215);
+  }
+`;
+
+const LayoutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: rgb(208 219 241);
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (max-width: 1023px) and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (max-width: 1023px) and (min-width: 640px) {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+`;
+
+const SideNav = styled.div`
+  border-right: 1px solid white;
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+const SmallNav = styled.div`
+  display: none;
+  @media only screen and (max-width: 1024px) {
+    display: block;
+  }
+  details summary {
+    cursor: pointer;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  flex-grow: 1;
+  @media (min-width: 1024px) {
+    height: 100%;
+  }
+`;
+
+const Content = styled.div`
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  @media (min-width: 1024px) {
+    padding: 2.5rem 1.5rem 2.5rem 0.75rem;
+  }
+  @media (min-width: 768px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 `;

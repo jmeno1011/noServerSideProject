@@ -33,6 +33,7 @@ const Header = () => {
             <Icon icon="charm:menu-hamburger" />
           )}
         </HamburgerBtn>
+        
         <Nav open={open}>
           <NavUl>
             <NavLi>
@@ -78,6 +79,7 @@ export default Header;
 const Heeader = styled.header`
   background-color: #15171c;
   padding: 25px 0;
+  width: 100%;
 `;
 
 const HeaderDiv = styled.div`

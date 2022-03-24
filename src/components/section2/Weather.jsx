@@ -44,6 +44,7 @@ export function Weather() {
                 padding: "0.5rem 0.8rem",
                 borderRadius: "1rem",
                 alignItems: "center",
+                width: "320px",
               }}
             >
               <div>{data.name}</div>

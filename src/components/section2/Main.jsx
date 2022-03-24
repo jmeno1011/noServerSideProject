@@ -1,17 +1,10 @@
-import React, { useEffect } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
-import styles from "./css/styles.module.css";
 import { Memo } from "./Memo";
 
 export function Main() {
-  const location = useLocation();
-  const nav = {
-    main: "/noServerSideProject/main",
-    weather: "/noServerSideProject/main/weather",
-  };
-
   return (
     <>
       <div>

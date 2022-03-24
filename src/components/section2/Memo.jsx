@@ -10,6 +10,15 @@ export function Memo() {
       <p className={styles.front__memo_p}>
         주제 : webrtc, webgl, storybook, sdk제작, tdd, pwa 만들어보기
       </p>
+      <p>
+        아이디어 : 구글 이미지 검색 만들어보기
+        <br />
+        - 이미지마다 카테코리 속성 넣어서 <br />- 예를 들면 1을 검색하면 1과
+        관련된 이미지가 나오고 하나의 이미지를 클릭하면 오른쪽엔 확대되서 나오고
+        해당 이미지 정보를 보여주는 링크로 보내주고 그 아래엔 카테고리에
+        해당하는 이미지를 추가로 보여주기 왼쪽에는 원래 창에 있던 이미지들을
+        왼쪽 창 크기에 맞게 알아서 배치하기
+      </p>
       <h3>・책 저장 (✅은 있음)</h3>
       <ul className={styles.memo__ul}>
         <li>Node.js 디자인 패턴 바이블</li>

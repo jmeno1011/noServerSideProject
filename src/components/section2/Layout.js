@@ -28,15 +28,95 @@ export const Layout = () => {
   });
   return (
     <>
-      <div style={{display:'flex', flexDirection:'column', flex:'1 1 0%'}}>
+      <div style={{ display: "flex", flexDirection: "column", flex: "1 1 0%" }}>
         <Header />
         <div style={{ display: "flex", flexDirection: "column" }}>
           <LayoutWrapper>
             <Wrapper>
               <SmallNav>
                 <details>
-                  <summary>Docs Navigation</summary>
-                  <div></div>
+                  <summary
+                    style={{ paddingTop: "1rem", paddingBottom: "1rem" }}
+                  >
+                    Docs Navigation
+                  </summary>
+                  <div
+                    style={{ paddingTop: "1.5rem", paddingBottom: "1.5rem" }}
+                  >
+                    <nav>
+                      <ul>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="memo"
+                          >
+                            ⭐memo
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="weather"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            weather
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="dom-select"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            dom-select
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="test"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            test
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="chapter3"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            리다기 3장
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="chapter4"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            리다기 4장
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="chapter5"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            리다기 5장
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </details>
                 <hr />
               </SmallNav>

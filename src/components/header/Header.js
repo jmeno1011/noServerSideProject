@@ -33,7 +33,7 @@ const Header = () => {
             <Icon icon="charm:menu-hamburger" />
           )}
         </HamburgerBtn>
-        
+
         <Nav open={open}>
           <NavUl>
             <NavLi>
@@ -66,7 +66,15 @@ const Header = () => {
                 GitHub
               </a>
             </NavLi>
-            <NavLi ml="2rem">etc</NavLi>
+            <NavLi ml="2rem">
+              <a
+                href="https://meno1011.tistory.com/"
+                target={"_blank"}
+                rel="noopener noreferrer"
+              >
+                blog
+              </a>
+            </NavLi>
           </NavUl>
         </Nav>
       </HeaderDiv>
@@ -145,5 +153,8 @@ const NavLi = styled.li`
   }
   > a {
     color: white;
+  }
+  a:hover {
+    color: rgb(100 237 199);
   }
 `;

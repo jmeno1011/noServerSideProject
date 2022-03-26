@@ -2,7 +2,6 @@ import "./App.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Memo, Weather, Layout } from "./components/section2";
-import DomSelect from "./components/section3/DomSelect";
 import { IterationSample1 } from "./components/section8/IterationSample1";
 import { IterationSample2 } from "./components/section8/IterationSample2";
 import LifeCycle from "./components/section9/LifeCycle";
@@ -36,7 +35,6 @@ function App() {
           <Route path="weather" element={<Weather />} />
           <Route index element={<Memo />} />
           <Route path="memo" element={<Memo />} />
-          <Route path="dom-select" element={<DomSelect />} />
           <Route path="test" element={<Test />} />
           <Route path="chapter3" element={<Chapter3 />} />
           <Route path="chapter4" element={<Chapter4 />} />

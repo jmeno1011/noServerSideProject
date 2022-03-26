@@ -157,16 +157,6 @@ export const Layout = () => {
                         <Link
                           // className="a-white"
                           className="side-nav"
-                          to="dom-select"
-                          style={{ paddingBottom: 4, marginBottom: 8 }}
-                        >
-                          dom-select
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          // className="a-white"
-                          className="side-nav"
                           to="test"
                           style={{ paddingBottom: 4, marginBottom: 8 }}
                         >

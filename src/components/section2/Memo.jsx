@@ -57,6 +57,20 @@ export function Memo() {
         <br />
         https://github.com/pjt3591oo/react-hook-zustand
       </p>
+      <p>
+        아이디어 - 앱 버전
+        <br />
+        시간: <br />
+        걸음:
+        <br />
+        거리:
+        <br />
+        배경: 사진찍으면 바로 뒷배경 전환
+        <br />
+        추가 - 날짜, 칼로리, 현재시간, // 걸음 % , 뛰기 %,
+        <br />
+        필요 카메라 퍼미션 위치 퍼미션
+      </p>
       {/* </div> */}
     </>
   );

@@ -71,7 +71,10 @@ export function Memo() {
         <br />
         필요 카메라 퍼미션 위치 퍼미션
       </p>
-      {/* </div> */}
+      <h3>메모 flutter</h3>
+      <p>카카오 로그인 깃허브 링크 <br/>
+        <a href="https://github.com/kakao/kakao_flutter_sdk" target={"_blank"} rel="noopener noreferrer">🔵카카오 로그인 flutter</a>
+      </p>
     </>
   );
 }

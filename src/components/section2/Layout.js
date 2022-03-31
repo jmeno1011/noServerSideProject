@@ -239,19 +239,19 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: rgb(208 219 241);
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  @media (max-width: 1023px) and (min-width: 768px) {
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
     max-width: 768px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  @media (max-width: 1023px) and (min-width: 640px) {
+  @media screen and (max-width: 1023px) and (min-width: 640px) {
     max-width: 640px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;

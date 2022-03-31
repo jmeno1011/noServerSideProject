@@ -34,96 +34,103 @@ export function Weather() {
   }, []);
   return (
     <>
-      <div>
-        {data && data ? (
-          <>
-            <SectionWrap>
-              <PicSection>
-                <div>{data.name}</div>
-                <div
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "space-around",
-                  }}
-                >
-                  <div style={{ width: "150px" }}>
-                    <h1 style={{ margin: 0, marginTop: "1rem" }}>
-                      {Math.round(data.main.temp - 273.15)}℃
-                    </h1>
-                    <p style={{ margin: 0 }}>{data.weather[0].description}</p>
-                    <p
-                      style={{
-                        margin: 0,
-                        fontSize: "0.75rem",
-                        letterSpacing: "0.7px",
-                        fontWeight: "700",
-                        color: "rgba(0,0,0,0.7)",
-                      }}
-                    >
-                      humidity: {data.main.humidity}%
-                    </p>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-                      alt=""
-                    />
-                  </div>
+      {data && data ? (
+        <>
+          <SectionWrap>
+            <PicSection>
+              <header>{data.name}</header>
+              <WeatherAticle>
+                <div style={{ width: "150px" }}>
+                  <h1 className="m-0 mt-1">
+                    {Math.round(data.main.temp - 273.15)}℃
+                  </h1>
+                  <p className="m-0">{data.weather[0].description}</p>
+                  <Humidty>humidity: {data.main.humidity}%</Humidty>
                 </div>
                 <div
                   style={{
-                    width: "100%",
                     display: "flex",
                     alignItems: "center",
                   }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "1.5rem",
-                      color: "darkred",
-                    }}
-                  >
-                    <Icon icon="el:map-marker" />
-                  </div>
-                  {/* <div> */}
-                  <p style={{ margin: "0.5rem" }}>lat : {location.lat}</p>/
-                  <p style={{ margin: "0.5rem" }}>lon : {location.lon}</p>
-                  {/* </div> */}
+                  <img
+                    src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+                    alt=""
+                  />
                 </div>
-              </PicSection>
-            </SectionWrap>
-            <p>체감온도 : {Math.round(data.main.feels_like - 273.15)}℃ </p>
-            <p>최저 온도: {Math.round(data.main.temp_min - 273.15)}℃</p>
-            <p>최저 온도: {Math.round(data.main.temp_max - 273.15)}℃</p>
-          </>
-        ) : (
-          ""
-        )}
-      </div>
+              </WeatherAticle>
+              <WeatherFooter>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    fontSize: "1.5rem",
+                    color: "darkred",
+                  }}
+                >
+                  <Icon icon="el:map-marker" />
+                </div>
+                {/* <div> */}
+                <p className="m-05">lat : {location.lat}</p>/
+                <p className="m-05">lon : {location.lon}</p>
+                {/* </div> */}
+              </WeatherFooter>
+            </PicSection>
+          </SectionWrap>
+          <p>체감온도 : {Math.round(data.main.feels_like - 273.15)}℃ </p>
+          <p>최저 온도: {Math.round(data.main.temp_min - 273.15)}℃</p>
+          <p>최저 온도: {Math.round(data.main.temp_max - 273.15)}℃</p>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 }
 
+const SectionWrap = styled.div`
+  width: 100%;
+  display: flex;
+  @media screen and (max-width: 1023px) {
+    padding: 0 1rem;
+  }
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
 const PicSection = styled.section`
-  width: 320px;
+  width: 350px;
   padding: 0.5rem 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(109, 213, 235);
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `;
 
-const SectionWrap = styled.div`
+const WeatherAticle = styled.article`
+  width: 100%;
   display: flex;
-  @media only screen and (max-width: 768px) {
+  justify-content: space-around;
+  @media screen and (max-width: 1023px) {
+    justify-content: center;
+  }
+`;
+const Humidty = styled.p`
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+`;
+const WeatherFooter = styled.footer`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1023px) {
     justify-content: center;
   }
 `;

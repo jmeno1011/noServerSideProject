@@ -41,9 +41,6 @@ export function Memo() {
       <p className={styles.front__memo_p}>
         email 수집 동의, kakao api연동, 수집한 데이터 사용 용도 생각하기
       </p>
-      <h3>・추가주제</h3>
-      <p className={styles.front__memo_p}>todo-list 만들어보기</p>
-      <p className={styles.front__memo_p}>스벨트로도 만들어보기</p>
       <h3>메모 3</h3>
       <p className={styles.front__memo_p}>
         {" "}
@@ -72,8 +69,15 @@ export function Memo() {
         필요 카메라 퍼미션 위치 퍼미션
       </p>
       <h3>메모 flutter</h3>
-      <p>카카오 로그인 깃허브 링크 <br/>
-        <a href="https://github.com/kakao/kakao_flutter_sdk" target={"_blank"} rel="noopener noreferrer">🔵카카오 로그인 flutter</a>
+      <p>
+        카카오 로그인 깃허브 링크 <br />
+        <a
+          href="https://github.com/kakao/kakao_flutter_sdk"
+          target={"_blank"}
+          rel="noopener noreferrer"
+        >
+          🔵카카오 로그인 flutter
+        </a>
       </p>
     </>
   );

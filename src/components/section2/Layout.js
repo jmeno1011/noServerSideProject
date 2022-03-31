@@ -193,6 +193,17 @@ export const Layout = () => {
                           리다기 5장
                         </Link>
                       </li>
+                      <li>
+                        <details>
+                          <summary>html</summary>
+                          <nav>
+                            <ul>
+                              <li>sematic</li>
+                              <li>css</li>
+                            </ul>
+                          </nav>
+                        </details>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -279,6 +290,9 @@ const SmallNav = styled.div`
   }
   details summary {
     cursor: pointer;
+    ::after {
+      padding-left: 0.5rem;
+    }
   }
 `;
 

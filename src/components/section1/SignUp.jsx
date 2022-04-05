@@ -31,10 +31,10 @@ export function SignUp() {
     if (password !== confirmPassword) {
       return alert("The password and the confirm password must be the same. ");
     }
-    const userInfo = {
-      id: name,
-      pw: password,
-    };
+    // const userInfo = {
+    //   id: name,
+    //   pw: password,
+    // };
     // console.log(userInfo);
   };
   return (

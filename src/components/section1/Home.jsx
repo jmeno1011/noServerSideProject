@@ -27,7 +27,7 @@ export function Home() {
                 </p>
                 <p>
                   <a
-                    href="/noServerSideProject"
+                    href="/prac_etc"
                     onClick={onClickSignOut}
                     className="a-white"
                   >

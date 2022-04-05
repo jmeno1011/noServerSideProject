@@ -9,7 +9,7 @@ export function About() {
         <p>That feels like an existential question, don't you think?</p>
       </main>
       <nav>
-        <Link to="/noServerSideProject" className="a-white">
+        <Link to="/prac_etc" className="a-white">
           👉Home
         </Link>
       </nav>

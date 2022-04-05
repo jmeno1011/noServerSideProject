@@ -70,7 +70,7 @@ export function SignUp() {
         </div>
         <button className={styles.signupin__button}>Sign Up</button>
       </form>
-      <Link to="/noServerSideProject" className="a-white a-center">
+      <Link to="/prac_etc" className="a-white a-center">
         Home
       </Link>
     </div>

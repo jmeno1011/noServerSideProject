@@ -9,10 +9,10 @@ const Header = () => {
   const active_color = { color: "#6495ed" };
   const location = useLocation();
   const nav = {
-    main: "/noServerSideProject/main",
-    memo: "/noServerSideProject/main/memo",
-    section5: "/noServerSideProject/section5",
-    weather: "/noServerSideProject/main/weather",
+    main: "/prac_etc/main",
+    memo: "/prac_etc/main/memo",
+    section5: "/prac_etc/section5",
+    weather: "/prac_etc/main/weather",
   };
 
   return (
@@ -21,7 +21,7 @@ const Header = () => {
         <a
           className="a-white"
           style={{ display: "flex", margin: 0, alignItems: "center" }}
-          href="/noServerSideProject"
+          href="/prac_etc"
         >
           <LogoImg src={logo} alt="logo" />
           <LogoSpan>HOME</LogoSpan>
@@ -59,7 +59,7 @@ const Header = () => {
             </NavLi>
             <NavLi ml="2rem">
               <a
-                href="https://github.com/jmeno1011/noServerSideProject"
+                href="https://github.com/jmeno1011/prac_etc"
                 target={"_blank"}
                 rel="noopener noreferrer"
               >

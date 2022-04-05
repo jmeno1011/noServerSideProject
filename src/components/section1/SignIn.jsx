@@ -25,7 +25,7 @@ export function SignIn() {
       return alert("username or password was invalid");
     } else {
       window.localStorage.setItem("isLogin", JSON.stringify(true));
-      navigate("/noServerSideProject");
+      navigate("/prac_etc");
     }
   };
 
@@ -62,7 +62,7 @@ export function SignIn() {
         <p className={styles.test__p}>test용 id: test</p>
         <p className={styles.test__p}>test용 pw: test</p>
       </div>
-      <Link to="/noServerSideProject" className="a-white a-center">
+      <Link to="/prac_etc" className="a-white a-center">
         Home
       </Link>
     </div>

@@ -83,6 +83,10 @@ export function Memo() {
         아이디어 - 여행편
         <br />
         여행할 곳 사진 넣고 경로 사진 또는 공유가능하게 하기
+        <br />
+        mui-card에서 ⇒ https://mui.com/components/cards/#complex-interaction
+        <br />
+        펼치면 정보랑 경로 나오게
       </p>
     </>
   );

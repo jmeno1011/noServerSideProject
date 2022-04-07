@@ -1,9 +1,15 @@
 import "./App.css";
-import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Memo, Weather, Layout } from "./components/section2";
-import { IterationSample1 } from "./components/section8/IterationSample1";
-import { IterationSample2 } from "./components/section8/IterationSample2";
+import { IterationSample1 } from "./components/chapter6/IterationSample1";
+import { IterationSample2 } from "./components/chapter6/IterationSample2";
 import LifeCycle from "./components/section9/LifeCycle";
 import { Counters } from "./components/section10/Counters";
 import { Info } from "./components/section10/Info";
@@ -19,6 +25,7 @@ import Test from "./components/section2/Test";
 import Chapter3 from "./components/chapter3/Chapter3";
 import Chapter4 from "./components/chapter4/Chapter4";
 import Chapter5 from "./components/chapter5/Chapter5";
+import Chapter6 from "./components/chapter6/Chapter6";
 
 function App() {
   let navigate = useNavigate();
@@ -32,23 +39,75 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="sign-up" element={<SignUp />} />
           <Route path="sign-in" element={<SignIn />} />
-          <Route path="main/" element={<RequirAuth><Layout /></RequirAuth>}>
+          <Route
+            path="main/"
+            element={
+              <RequirAuth>
+                <Layout />
+              </RequirAuth>
+            }
+          >
             <Route path="weather" element={<Weather />} />
-            <Route index element={<RequirAuth><Memo /></RequirAuth>} />
-            <Route path="memo" element={<RequirAuth><Memo /></RequirAuth>} />
-            <Route path="test" element={<RequirAuth><Test /></RequirAuth>} />
-            <Route path="chapter3" element={<RequirAuth><Chapter3 /></RequirAuth>} />
-            <Route path="chapter4" element={<RequirAuth><Chapter4 /></RequirAuth>} />
-            <Route path="chapter5" element={<RequirAuth><Chapter5 /></RequirAuth>} />
+            <Route
+              index
+              element={
+                <RequirAuth>
+                  <Memo />
+                </RequirAuth>
+              }
+            />
+            <Route
+              path="memo"
+              element={
+                <RequirAuth>
+                  <Memo />
+                </RequirAuth>
+              }
+            />
+            <Route
+              path="test"
+              element={
+                <RequirAuth>
+                  <Test />
+                </RequirAuth>
+              }
+            />
+            <Route
+              path="chapter3"
+              element={
+                <RequirAuth>
+                  <Chapter3 />
+                </RequirAuth>
+              }
+            />
+            <Route
+              path="chapter4"
+              element={
+                <RequirAuth>
+                  <Chapter4 />
+                </RequirAuth>
+              }
+            />
+            <Route
+              path="chapter5"
+              element={
+                <RequirAuth>
+                  <Chapter5 />
+                </RequirAuth>
+              }
+            />
+
+            <Route
+              path="chapter6"
+              element={
+                <RequirAuth>
+                  <Chapter6 />
+                </RequirAuth>
+              }
+            />
           </Route>
-          <Route
-            path="chapter6-1/"
-            element={<IterationSample1 />}
-          />
-          <Route
-            path="chapter6-2/"
-            element={<IterationSample2 />}
-          />
+          <Route path="chapter6-1/" element={<IterationSample1 />} />
+          <Route path="chapter6-2/" element={<IterationSample2 />} />
           <Route path="chapter7-1/" element={<LifeCycle />} />
           <Route path="chapter8-1" element={<Counters />} />
           <Route path="chapter8-2" element={<Info />} />
@@ -56,10 +115,7 @@ function App() {
           <Route path="chapter8-4" element={<Info2 />} />
           <Route path="chapter8-5" element={<Average />} />
           <Route path="chapter8-6" element={<Info3 />} />
-          <Route
-            path="chapter9-1"
-            element={<SassComponent />}
-          />
+          <Route path="chapter9-1" element={<SassComponent />} />
           <Route path="chapter12-1" element={<Immer />} />
           <Route path="chapter12-2" element={<Immer2 />} />
           <Route path="chapter12-3" element={<Immer3 />} />
@@ -89,7 +145,9 @@ function RequirAuth({ children }) {
   let auth = JSON.parse(window.localStorage.getItem("isLogin"));
   let location = useLocation();
   if (!auth) {
-    return <Navigate to="/prac_etc/sign-in" state={{ from: location }} replace />;
+    return (
+      <Navigate to="/prac_etc/sign-in" state={{ from: location }} replace />
+    );
   }
 
   return children;

@@ -114,6 +114,16 @@ export const Layout = () => {
                             리다기 5장
                           </Link>
                         </li>
+                        <li>
+                          <Link
+                            // className="a-white"
+                            className="side-nav"
+                            to="chapter5"
+                            style={{ paddingBottom: 4, marginBottom: 8 }}
+                          >
+                            리다기 6장
+                          </Link>
+                        </li>
                       </ul>
                     </nav>
                   </div>
@@ -191,6 +201,16 @@ export const Layout = () => {
                           style={{ paddingBottom: 4, marginBottom: 8 }}
                         >
                           리다기 5장
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          // className="a-white"
+                          className="side-nav"
+                          to="chapter6"
+                          style={{ paddingBottom: 4, marginBottom: 8 }}
+                        >
+                          리다기 6장
                         </Link>
                       </li>
                       <li>

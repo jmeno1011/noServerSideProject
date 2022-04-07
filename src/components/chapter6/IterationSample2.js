@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ContentTitle } from "../chapter3/titleLink";
+import Title from "../Title";
 
 export const IterationSample2 = () => {
   const [names, setNames] = useState([
@@ -42,6 +44,7 @@ export const IterationSample2 = () => {
   ));
   return (
     <>
+      <Title Component={ContentTitle} id={"IterationSample2"} />
       <input value={inputText} onChange={onChange} />
       <button onClick={onClick}>추가</button>
       <ul>{nameList}</ul>

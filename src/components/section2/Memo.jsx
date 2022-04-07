@@ -18,6 +18,13 @@ export function Memo() {
         해당 이미지 정보를 보여주는 링크로 보내주고 그 아래엔 카테고리에
         해당하는 이미지를 추가로 보여주기 왼쪽에는 원래 창에 있던 이미지들을
         왼쪽 창 크기에 맞게 알아서 배치하기
+        <br />
+        +++ 이미지를 보여줄땐 원본사이즈를 존중하는 그리드? 또는 판으로 만들다.
+        <br />
+        ex)
+        https://reactjsexample.com/a-web-viewer-for-anime-girls-holding-programming-books-made-using-react/
+        <br />
+        여기 사이트에 사진처럼
       </p>
       <h3>・책 저장 (✅은 있음)</h3>
       <ul className={styles.memo__ul}>
@@ -87,6 +94,15 @@ export function Memo() {
         mui-card에서 ⇒ https://mui.com/components/cards/#complex-interaction
         <br />
         펼치면 정보랑 경로 나오게
+      </p>
+      <p>
+        ・게시판 만들때 쓸만한 내용
+        <br />
+        회원가입/로그인, 카테고리 crud, 글쓰기 crud ⇒ 카테고리 crud를 적용 할 수
+        있는게 중요포인트
+        <br />
+        글쓰기는 마크다운 에디터랑 태그 기능도 넣구욤 ⇒ 이건 글쓰기에서
+        네이버처럼 되는 기능
       </p>
     </>
   );

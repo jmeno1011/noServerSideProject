@@ -24,6 +24,12 @@ const Test = () => {
         체크박스 확인
       </label>
       {/* <p>{chk}</p> */}
+      <h2>font family 변환하는 프로그램 만들어보기</h2>
+      <p style={{ fontFamily: "'Montserrat', sans-serif" }}>
+        안녕하세요 Say Hello
+      </p>
+      <p>안녕하세요 Say Hello</p>
+      <p>안녕하세요 Say Hello</p>
     </div>
   );
 };

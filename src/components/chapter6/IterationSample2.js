@@ -38,15 +38,35 @@ export const IterationSample2 = () => {
 
   const nameList = names.map((name) => (
     // onDoubleClick : 더블클릭 이벤트
-    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
-      {name.text}
+    <li
+      key={name.id}
+      onDoubleClick={() => onRemove(name.id)}
+      style={{ cursor: "pointer" }}
+      title={`더블 클릭하면 ${name.text}이/가 삭제됩니다.`}
+    >
+      ・{name.text}
     </li>
   ));
   return (
     <>
       <Title Component={ContentTitle} id={"IterationSample2"} />
-      <input value={inputText} onChange={onChange} />
-      <button onClick={onClick}>추가</button>
+      <p>
+        {"{ id: id, text: text }"}구조의 값을 「추가」버튼을 누를때 id가 5로
+        들어가 있어서 <br />
+        4개의 목록에 5번째가 추가 된다.
+      </p>
+      <label>✅추가하고 싶은 값을 넣고 추가해주세요</label>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          paddingLeft: "1rem",
+          width: 250,
+        }}
+      >
+        <input value={inputText} onChange={onChange} />
+        <button onClick={onClick}>추가</button>
+      </div>
       <ul>{nameList}</ul>
     </>
   );

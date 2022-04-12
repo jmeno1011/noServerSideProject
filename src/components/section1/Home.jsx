@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 
 export function Home() {
-  const [isLogin, setIsLogin] = useState(
-    () => JSON.parse(window.localStorage.getItem("isLogin")) || false
-  );
+  let auth = JSON.parse(window.localStorage.getItem("isLogin"));
 
   const onClickSignOut = () => {
     window.localStorage.setItem("isLogin", JSON.stringify(false));
@@ -18,7 +15,7 @@ export function Home() {
           <h2>Welcome to the homepage!</h2>
           <details>
             <summary>More...</summary>
-            {isLogin ? (
+            {auth ? (
               <>
                 <p>
                   <Link to={"main"} className="a-white">

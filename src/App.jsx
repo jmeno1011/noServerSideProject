@@ -106,8 +106,6 @@ function App() {
               }
             />
           </Route>
-          <Route path="chapter6-1/" element={<IterationSample1 />} />
-          <Route path="chapter6-2/" element={<IterationSample2 />} />
           <Route path="chapter7-1/" element={<LifeCycle />} />
           <Route path="chapter8-1" element={<Counters />} />
           <Route path="chapter8-2" element={<Info />} />

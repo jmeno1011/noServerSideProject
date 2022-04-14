@@ -8,9 +8,6 @@ import {
 } from "react-router-dom";
 import { Home, About, SignUp, SignIn } from "./components/section1";
 import { Memo, Weather, Layout } from "./components/section2";
-import { IterationSample1 } from "./components/chapter6/IterationSample1";
-import { IterationSample2 } from "./components/chapter6/IterationSample2";
-import LifeCycle from "./components/section9/LifeCycle";
 import { Counters } from "./components/section10/Counters";
 import { Info } from "./components/section10/Info";
 import Counters2 from "./components/section10/Counters2";
@@ -26,6 +23,7 @@ import Chapter3 from "./components/chapter3/Chapter3";
 import Chapter4 from "./components/chapter4/Chapter4";
 import Chapter5 from "./components/chapter5/Chapter5";
 import Chapter6 from "./components/chapter6/Chapter6";
+import Chapter7 from "./components/chapter7/Chapter7";
 
 function App() {
   let navigate = useNavigate();
@@ -96,7 +94,6 @@ function App() {
                 </RequirAuth>
               }
             />
-
             <Route
               path="chapter6"
               element={
@@ -105,8 +102,15 @@ function App() {
                 </RequirAuth>
               }
             />
+            <Route
+              path="chapter7"
+              element={
+                <RequirAuth>
+                  <Chapter7 />
+                </RequirAuth>
+              }
+            />
           </Route>
-          <Route path="chapter7-1/" element={<LifeCycle />} />
           <Route path="chapter8-1" element={<Counters />} />
           <Route path="chapter8-2" element={<Info />} />
           <Route path="chapter8-3" element={<Counters2 />} />

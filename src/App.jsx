@@ -24,6 +24,7 @@ import Chapter4 from "./components/chapter4/Chapter4";
 import Chapter5 from "./components/chapter5/Chapter5";
 import Chapter6 from "./components/chapter6/Chapter6";
 import Chapter7 from "./components/chapter7/Chapter7";
+import Pockemon from "./components/resource/Pockemon";
 
 function App() {
   let navigate = useNavigate();
@@ -111,6 +112,7 @@ function App() {
               }
             />
           </Route>
+          <Route path="resource" element={<Pockemon />} />
           <Route path="chapter8-1" element={<Counters />} />
           <Route path="chapter8-2" element={<Info />} />
           <Route path="chapter8-3" element={<Counters2 />} />

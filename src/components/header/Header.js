@@ -51,7 +51,7 @@ const Header = () => {
             <NavLi ml="2rem">
               <Link
                 className="a-white"
-                to="#"
+                to="/prac_etc/resource"
                 style={location.pathname === nav.section5 ? active_color : {}}
               >
                 Resources
@@ -150,6 +150,7 @@ const NavLi = styled.li`
   margin-left: ${(props) => props.ml};
   @media only screen and (max-width: 768px) {
     margin: 1rem;
+    border-bottom: 1px solid #858585;
   }
   > a {
     color: white;

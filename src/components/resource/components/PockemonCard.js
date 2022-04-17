@@ -39,6 +39,7 @@ const PockemonCard = () => {
 export default PockemonCard;
 
 const Pockemon = styled.img`
-  width: 100%;
+  /* height: 150px; */
+  width: 150px;
   object-fit: cover;
 `;

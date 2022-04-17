@@ -10,6 +10,7 @@ const SearchBar = () => {
         포켓몬 도감
       </SearchBarTitle>
       <Input type={"text"} placeholder="search your pockemon!" />
+      <button></button>
     </InputWrapper>
   );
 };

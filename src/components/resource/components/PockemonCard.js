@@ -22,10 +22,10 @@ const PockemonCard = () => {
           <p>001</p>
           이상해씨
         </h3>
-        <div>
-          <GrassSpan>풀</GrassSpan>
-          <Poison>독</Poison>
-        </div>
+        <TypeWrapper>
+          <TypeSpan>풀</TypeSpan>
+          <TypeSpan>독</TypeSpan>
+        </TypeWrapper>
       </CardInfo>
     </CardWrapper>
   );
@@ -45,7 +45,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  border-radius: 40px;
+  border-radius: 20px;
   h3 {
     margin: 0;
     font-size: 1.1rem;
@@ -64,8 +64,8 @@ const CardWrapper = styled.div`
 `;
 
 const CardInfo = styled.div`
-  padding: 0.5rem;
-  width: 100px;
+  padding: 0.25rem;
+  width: 140px;
 `;
 
 const GrassSpan = styled.span`
@@ -76,7 +76,21 @@ const Poison = styled.span`
   background-color: #a16ec2;
   color: white;
 `;
+const TypeWrapper = styled.div`
+  display: flex;
+  text-align: center;
+  /* padding: 0 0.25rem; */
+  span:first-child {
+    margin-right: 0.5rem;
+  }
+`;
 
 const TypeSpan = styled.span`
   width: 100%;
+  background-color: ${(props) => (props.children === "풀" ? "#7ab766" : "")};
+  background-color: ${(props) => (props.children === "독" ? "#a16ec2" : "")};
+  color: white;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 10px;
 `;

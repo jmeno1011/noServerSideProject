@@ -3,37 +3,50 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const PockemonCard = () => {
-  const [pockemon, setPockemon] = useState();
+  const [pockemon, setPockemon] = useState([]);
+  const [type, setType] = useState([]);
   const fetchUser = async () => {
     const response = await axios({
       method: "get",
-      url: "/pokemon",
+      url: "https://node-login-jwt-production.up.railway.app/pokemon",
     });
+    const arr = [];
+    response.data.pokemon.map((value) => arr.push(value.type.split(",")));
+    console.log(arr);
+    setType(arr);
+    console.log("response.data.pokemon:", response.data.pokemon);
     setPockemon(response.data.pokemon);
   };
   useEffect(() => {
     fetchUser();
   }, []);
   return (
-    <CardWrapper>
-      <Pockemon src="https://meno-image-storage.s3.ap-northeast-2.amazonaws.com/noServerSideProject/%ED%8F%AC%EC%BC%93%EB%AA%AC/001%EC%9D%B4%EC%83%81%ED%95%B4%EC%94%A8.png" />
-      <CardInfo>
-        <h3>
-          <p>001</p>
-          이상해씨
-        </h3>
-        <TypeWrapper>
-          <TypeSpan>풀</TypeSpan>
-          <TypeSpan>독</TypeSpan>
-        </TypeWrapper>
-      </CardInfo>
-    </CardWrapper>
+    <>
+      {pockemon.map((value, index) => (
+        <CardWrapper key={index}>
+          <Pockemon src={value.url} />
+          <CardInfo>
+            <h3>
+              <p>{value.no}</p>
+              {value.name}
+            </h3>
+            <TypeWrapper>
+              {value.type.split(",").map((value) => (
+                <TypeSpan>{value}</TypeSpan>
+              ))}
+            </TypeWrapper>
+            {/* <TypeSpan>독</TypeSpan> */}
+          </CardInfo>
+        </CardWrapper>
+      ))}
+    </>
   );
 };
 
 export default PockemonCard;
 
 const Pockemon = styled.img`
+  height: 100px;
   width: 100px;
   object-fit: cover;
 `;
@@ -46,6 +59,8 @@ const CardWrapper = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 20px;
+  margin-right: 0.8rem;
+  margin-bottom: 0.5rem;
   h3 {
     margin: 0;
     font-size: 1.1rem;
@@ -87,8 +102,28 @@ const TypeWrapper = styled.div`
 
 const TypeSpan = styled.span`
   width: 100%;
+  background-color: ${(props) => (props.children === "노말" ? "#92999F" : "")};
+  background-color: ${(props) => (props.children === "불꽃" ? "#EFA061" : "")};
+  background-color: ${(props) => (props.children === "물" ? "#608FCF" : "")};
   background-color: ${(props) => (props.children === "풀" ? "#7ab766" : "")};
+  background-color: ${(props) => (props.children === "전기" ? "#EDD259" : "")};
+  background-color: ${(props) => (props.children === "얼음" ? "#8DCCC0" : "")};
+  background-color: ${(props) => (props.children === "격투" ? "#BC4B6A" : "")};
   background-color: ${(props) => (props.children === "독" ? "#a16ec2" : "")};
+  background-color: ${(props) => (props.children === "땅" ? "#CA7C50" : "")};
+  background-color: ${(props) => (props.children === "비행" ? "#95A8D9" : "")};
+  background-color: ${(props) =>
+    props.children === "에스퍼" ? "#E57879" : ""};
+  background-color: ${(props) => (props.children === "벌레" ? "#9BBF48" : "")};
+  background-color: ${(props) => (props.children === "바위" ? "#C3B78F" : "")};
+  background-color: ${(props) =>
+    props.children === "고스트" ? "#5769A7" : ""};
+  background-color: ${(props) =>
+    props.children === "드래곤" ? "#336CBE" : ""};
+  background-color: ${(props) => (props.children === "악" ? "#585365" : "")};
+  background-color: ${(props) => (props.children === "강철" ? "#678D9E" : "")};
+  background-color: ${(props) =>
+    props.children === "페어리" ? "#DC94E1" : ""};
   color: white;
   padding-top: 3px;
   padding-bottom: 3px;

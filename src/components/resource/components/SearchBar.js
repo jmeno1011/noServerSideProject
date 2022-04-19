@@ -10,11 +10,11 @@ const SearchBar = () => {
         <img src={monsterBall} />
         포켓몬 도감
       </SearchBarTitle>
-      <form>
+      <form style={{ display: "flex", alignItems: "center" }}>
         <Input type={"text"} placeholder="search your pockemon!" />
-        <button>
+        <SearchButton>
           <Icon icon="ant-design:search-outlined" />
-        </button>
+        </SearchButton>
       </form>
     </InputWrapper>
   );
@@ -42,4 +42,14 @@ const Input = styled.input`
   height: 32px;
   font-size: 1.25rem;
   padding: 1rem;
+`;
+
+const SearchButton = styled.button`
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

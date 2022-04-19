@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import monsterBall from "../css/img/icon_ball_b.png";
+import { Icon } from "@iconify/react";
 
 const SearchBar = () => {
   return (
@@ -9,8 +10,12 @@ const SearchBar = () => {
         <img src={monsterBall} />
         포켓몬 도감
       </SearchBarTitle>
-      <Input type={"text"} placeholder="search your pockemon!" />
-      <button></button>
+      <form>
+        <Input type={"text"} placeholder="search your pockemon!" />
+        <button>
+          <Icon icon="ant-design:search-outlined" />
+        </button>
+      </form>
     </InputWrapper>
   );
 };

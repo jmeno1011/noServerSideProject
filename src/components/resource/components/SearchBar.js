@@ -3,12 +3,14 @@ import styled from "styled-components";
 import monsterBall from "../css/img/icon_ball_b.png";
 import { Icon } from "@iconify/react";
 
-const SearchBar = () => {
+const SearchBar = ({ pockemon, setPockemon }) => {
   const [keyword, setKeyword] = useState("");
   const search = (e) => {
     e.preventDefault();
     console.log("keyword::", keyword);
+    setPockemon(pockemon.filter((item) => item.type.includes(keyword)));
   };
+
   return (
     <InputWrapper>
       <SearchBarTitle>

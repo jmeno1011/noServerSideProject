@@ -14,6 +14,10 @@ const Layout = () => {
     });
     const arr = [];
     response.data.pokemon.map((value) => arr.push(value.type.split(",")));
+    console.log(
+      "filter::",
+      response.data.pokemon.filter((item) => item.type.includes("풀"))
+    );
     console.log(arr);
     setType(arr);
     console.log("response.data.pokemon:", response.data.pokemon);
@@ -24,7 +28,7 @@ const Layout = () => {
   }, []);
   return (
     <div style={{ backgroundColor: "white" }}>
-      <SearchBar />
+      <SearchBar pockemon={pockemon} setPockemon={setPockemon} />
       <CardSpace>
         <PockemonCard pockemon={pockemon} />
       </CardSpace>

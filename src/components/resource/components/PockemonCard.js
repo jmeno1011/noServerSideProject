@@ -78,8 +78,8 @@ const TypeWrapper = styled.div`
   display: flex;
   text-align: center;
   /* padding: 0 0.25rem; */
-  span:first-child {
-    margin-right: 0.5rem;
+  span:nth-child(2) {
+    margin-left: 0.5rem;
   }
 `;
 

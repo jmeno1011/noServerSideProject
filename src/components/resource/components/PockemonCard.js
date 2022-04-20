@@ -2,24 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const PockemonCard = () => {
-  const [pockemon, setPockemon] = useState([]);
-  const [type, setType] = useState([]);
-  const fetchUser = async () => {
-    const response = await axios({
-      method: "get",
-      url: "https://node-login-jwt-production.up.railway.app/pokemon",
-    });
-    const arr = [];
-    response.data.pokemon.map((value) => arr.push(value.type.split(",")));
-    console.log(arr);
-    setType(arr);
-    console.log("response.data.pokemon:", response.data.pokemon);
-    setPockemon(response.data.pokemon);
-  };
-  useEffect(() => {
-    fetchUser();
-  }, []);
+const PockemonCard = ({ pockemon }) => {
   return (
     <>
       {pockemon.map((value, index) => (

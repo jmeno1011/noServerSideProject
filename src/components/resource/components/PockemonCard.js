@@ -23,7 +23,7 @@ const PockemonCard = () => {
   return (
     <>
       {pockemon.map((value, index) => (
-        <CardWrapper key={index}>
+        <CardWrapper key={value.no}>
           <Pockemon src={value.url} />
           <CardInfo>
             <h3>
@@ -31,8 +31,8 @@ const PockemonCard = () => {
               {value.name}
             </h3>
             <TypeWrapper>
-              {value.type.split(",").map((value) => (
-                <TypeSpan>{value}</TypeSpan>
+              {value.type.split(",").map((value, index) => (
+                <TypeSpan key={index}>{value}</TypeSpan>
               ))}
             </TypeWrapper>
             {/* <TypeSpan>독</TypeSpan> */}

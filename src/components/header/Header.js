@@ -13,6 +13,7 @@ const Header = () => {
     memo: "/prac_etc/main/memo",
     section5: "/prac_etc/section5",
     weather: "/prac_etc/main/weather",
+    resource: "/prac_etc/resource"
   };
 
   return (
@@ -40,9 +41,9 @@ const Header = () => {
               {/* section2폴더의 css .side__nav li,a에 영향을 받아서 대문자로 나옴 */}
               <Link
                 className="a-white"
-                to=""
+                to="/prac_etc/main"
                 style={
-                  location.pathname === nav.main || nav.memo ? active_color : {}
+                  location.pathname === nav.main && nav.memo ? active_color : {}
                 }
               >
                 Documentation
@@ -52,7 +53,7 @@ const Header = () => {
               <Link
                 className="a-white"
                 to="/prac_etc/resource"
-                style={location.pathname === nav.section5 ? active_color : {}}
+                style={location.pathname === nav.resource ? active_color : {}}
               >
                 Resources
               </Link>

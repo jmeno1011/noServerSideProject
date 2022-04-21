@@ -31,7 +31,10 @@ const Layout = () => {
     <div style={{ backgroundColor: "white" }}>
       <SearchBar pockemon={pockemon} setSearchResult={setSearchResult} />
       <CardSpace>
-        <PockemonCard pockemon={searchResult.length===0?pockemon:searchResult} />
+        <PockemonCard
+          pockemon={searchResult.length === 0 ? pockemon : searchResult}
+          setSearchResult={setSearchResult}
+        />
       </CardSpace>
     </div>
   );

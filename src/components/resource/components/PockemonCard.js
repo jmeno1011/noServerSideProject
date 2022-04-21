@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const PockemonCard = ({ pockemon }) => {
+const PockemonCard = ({ pockemon, setSearchResult }) => {
+  const selectType = (e) => {
+    const type = e.target.dataset.value;
+    setSearchResult(pockemon.filter((item) => item.type.includes(type)));
+  };
   return (
     <>
       {pockemon.map((value, index) => (
@@ -14,7 +18,9 @@ const PockemonCard = ({ pockemon }) => {
             </h3>
             <TypeWrapper>
               {value.type.split(",").map((value, index) => (
-                <TypeSpan key={index}>{value}</TypeSpan>
+                <TypeSpan key={index} data-value={value} onClick={selectType}>
+                  {value}
+                </TypeSpan>
               ))}
             </TypeWrapper>
             {/* <TypeSpan>독</TypeSpan> */}
@@ -110,4 +116,5 @@ const TypeSpan = styled.span`
   padding-top: 3px;
   padding-bottom: 3px;
   border-radius: 10px;
+  cursor: pointer;
 `;

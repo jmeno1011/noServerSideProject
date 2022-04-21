@@ -43,4 +43,5 @@ const CardSpace = styled.div`
   background-color: darkred;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `;

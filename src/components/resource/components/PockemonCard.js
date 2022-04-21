@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const PockemonCard = ({ pockemon }) => {
@@ -66,14 +65,14 @@ const CardInfo = styled.div`
   width: 140px;
 `;
 
-const GrassSpan = styled.span`
-  background-color: #7ab766;
-  color: white;
-`;
-const Poison = styled.span`
-  background-color: #a16ec2;
-  color: white;
-`;
+// const GrassSpan = styled.span`
+//   background-color: #7ab766;
+//   color: white;
+// `;
+// const Poison = styled.span`
+//   background-color: #a16ec2;
+//   color: white;
+// `;
 const TypeWrapper = styled.div`
   display: flex;
   text-align: center;

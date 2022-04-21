@@ -30,6 +30,11 @@ const Test = () => {
       </p>
       <p>안녕하세요 Say Hello</p>
       <p>안녕하세요 Say Hello</p>
+      <DivWrapper>
+        <div></div>
+        <BorderdivW />
+        <div></div>
+      </DivWrapper>
       <div style={{ display: "flex", maxWidth: "800px" }}>
         <div
           style={{
@@ -132,3 +137,24 @@ const Pockemon = styled.img`
   width: 100%;
   object-fit: cover;
 `;
+
+const DivWrapper = styled.div`
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+const BorderdivW = styled.div`
+  height: 20px;
+  width: 100%;
+  border: 1px solid black;
+`
+
+const BorderdivH = styled.div`
+  height: 100%;
+  width: 20px;
+  border: 1px solid black;
+`

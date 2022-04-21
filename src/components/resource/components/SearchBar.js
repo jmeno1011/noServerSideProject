@@ -3,12 +3,17 @@ import styled from "styled-components";
 import monsterBall from "../css/img/icon_ball_b.png";
 import { Icon } from "@iconify/react";
 
-const SearchBar = ({ pockemon, setPockemon }) => {
+const SearchBar = ({ pockemon, setSearchResult }) => {
   const [keyword, setKeyword] = useState("");
   const search = (e) => {
     e.preventDefault();
     console.log("keyword::", keyword);
-    setPockemon(pockemon.filter((item) => item.type.includes(keyword)));
+    setSearchResult(pockemon.filter((item) => item.type.includes(keyword)));
+    const result = pockemon.filter((item) => item.type.includes(keyword))
+    if(result.length===0){
+      alert("검색결과가 없습니다.")
+    }
+    setKeyword("")
   };
 
   return (

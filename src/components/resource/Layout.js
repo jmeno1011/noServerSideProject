@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Layout = () => {
   const [pockemon, setPockemon] = useState([]);
+  const [searchResult, setSearchResult] = useState([]);
   const [type, setType] = useState([]);
   const fetchUser = async () => {
     const response = await axios({
@@ -14,13 +15,13 @@ const Layout = () => {
     });
     const arr = [];
     response.data.pokemon.map((value) => arr.push(value.type.split(",")));
-    console.log(
-      "filter::",
-      response.data.pokemon.filter((item) => item.type.includes("풀"))
-    );
-    console.log(arr);
+    // console.log(
+    //   "filter::",
+    //   response.data.pokemon.filter((item) => item.type.includes("풀"))
+    // );
+    // console.log(arr);
     setType(arr);
-    console.log("response.data.pokemon:", response.data.pokemon);
+    // console.log("response.data.pokemon:", response.data.pokemon);
     setPockemon(response.data.pokemon);
   };
   useEffect(() => {
@@ -28,9 +29,9 @@ const Layout = () => {
   }, []);
   return (
     <div style={{ backgroundColor: "white" }}>
-      <SearchBar pockemon={pockemon} setPockemon={setPockemon} />
+      <SearchBar pockemon={pockemon} setSearchResult={setSearchResult} />
       <CardSpace>
-        <PockemonCard pockemon={pockemon} />
+        <PockemonCard pockemon={searchResult.length===0?pockemon:searchResult} />
       </CardSpace>
     </div>
   );

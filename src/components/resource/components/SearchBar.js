@@ -5,15 +5,20 @@ import { Icon } from "@iconify/react";
 
 const SearchBar = ({ pockemon, setSearchResult }) => {
   const [keyword, setKeyword] = useState("");
+
   const search = (e) => {
     e.preventDefault();
     console.log("keyword::", keyword);
-    setSearchResult(pockemon.filter((item) => item.type.includes(keyword)));
-    const result = pockemon.filter((item) => item.type.includes(keyword))
-    if(result.length===0){
-      alert("검색결과가 없습니다.")
+
+    const result = pockemon.filter(
+      (item) => item.type.includes(keyword) || item.name.includes(keyword)
+    );
+    setSearchResult(result);
+    console.log(result);
+    if (result.length === 0) {
+      alert("검색결과가 없습니다.");
     }
-    setKeyword("")
+    setKeyword("");
   };
 
   return (

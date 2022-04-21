@@ -14,7 +14,6 @@ const SearchBar = ({ pockemon, setSearchResult }) => {
       (item) => item.type.includes(keyword) || item.name.includes(keyword)
     );
     setSearchResult(result);
-    console.log(result);
     if (result.length === 0) {
       alert("검색결과가 없습니다.");
     }
@@ -36,6 +35,9 @@ const SearchBar = ({ pockemon, setSearchResult }) => {
         />
         <SearchButton>
           <Icon icon="ant-design:search-outlined" />
+        </SearchButton>
+        <SearchButton>
+          <Icon icon="ep:refresh-right" />
         </SearchButton>
       </form>
     </InputWrapper>

@@ -34,7 +34,7 @@ function App() {
     <>
       <Routes>
         <Route path="/prac_etc/">
-          <Route path="" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="sign-up" element={<SignUp />} />
           <Route path="sign-in" element={<SignIn />} />

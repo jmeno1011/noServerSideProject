@@ -239,6 +239,15 @@ export const Layout = () => {
                             <ul>
                               <li>sematic</li>
                               <li>css</li>
+                              <li>
+                                <Link
+                                  className="side-nav"
+                                  to="calendar"
+                                  style={{ paddingBottom: 4, marginBottom: 8 }}
+                                >
+                                  Calendar
+                                </Link>
+                              </li>
                             </ul>
                           </nav>
                         </details>

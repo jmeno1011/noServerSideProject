@@ -25,6 +25,7 @@ import Chapter5 from "./components/chapter5/Chapter5";
 import Chapter6 from "./components/chapter6/Chapter6";
 import Chapter7 from "./components/chapter7/Chapter7";
 import Pockemon from "./components/resource/Pockemon";
+import Calendar from "./components/componentPJ/Calendar";
 
 function App() {
   let navigate = useNavigate();
@@ -111,6 +112,7 @@ function App() {
                 </RequirAuth>
               }
             />
+            <Route path="calendar" element={<Calendar />} />
           </Route>
           <Route path="resource" element={<Pockemon />} />
           <Route path="chapter8-1" element={<Counters />} />
@@ -123,6 +125,7 @@ function App() {
           <Route path="chapter12-1" element={<Immer />} />
           <Route path="chapter12-2" element={<Immer2 />} />
           <Route path="chapter12-3" element={<Immer3 />} />
+
           <Route
             path="*"
             element={

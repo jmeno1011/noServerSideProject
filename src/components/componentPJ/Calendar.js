@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Calendar = () => {
+  const [now, setNow] = useState(new Date());
+  console.log("now:", new Date());
   return (
     <div>
       Calendar
+      <h1>
+        현재 날짜 : {now.getFullYear()}년 {now.getMonth()}월 {now.getDate()}일{" "}
+      </h1>
       <Grid>
         <div>
           <div>col1</div>

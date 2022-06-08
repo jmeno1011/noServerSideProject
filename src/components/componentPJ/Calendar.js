@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Calendar = () => {
-  const [now, setNow] = useState(new Date());
-  const cYear = now.getFullYear();
-  const cMonth = now.getMonth();
-  const pDate = new Date(cYear, cMonth);
-  const nDate = new Date(cYear, cMonth + 1);
-  console.log("now:", new Date());
+  // const [now, setNow] = useState(new Date());
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth();
+
+  const startDay = new Date(currentYear, currentMonth, 0);
+  const preDate = startDay.getDate();
+  const preDay = startDay.getDay();
+  const preMonth = startDay.getMonth();
+
+  const endDay = new Date(currentYear, currentMonth + 1, 0);
+  const nextDate = endDay.getDate();
+  const nextDay = endDay.getDay();
+  const nextMonth = endDay.getMonth();
 
   const getDay = (n) => {
     switch (n % 7) {
@@ -27,15 +35,27 @@ const Calendar = () => {
         return "토";
     }
   };
-  console.log("getDay:", getDay(2));
+
+  // 지난달 표시할 내용
+  // 요일은 일요일 부터 시작
+  for (let i = preDate - preDay; i <= preDate; i++) {
+    // console.log("i::", i);
+  }
+  // 이번달 표시할 내용
+  for (let i = 1; i <= nextDate; i++) {
+    // console.log("i:::", i);
+  }
+
   return (
     <div>
       Calendar
-      <h2>이번달의 첫째 날짜 : {pDate.toString()} </h2>
-      <h2>1일 요일 날짜 : {getDay(pDate.getDay())}</h2>
-      <h2>현재 날짜 : {now.toString()}</h2>
-      {/* // Sunday - Saturday : 0 - 6 */}
-      <h2>다음 달 : {nDate.toString()}</h2>
+      <h5>startDay : {startDay.toString()}</h5>
+      <h5>
+        이전달의 마지막날：{preMonth + 1}월 {preDate}일 {getDay(preDay)}요일
+      </h5>
+      <h5>
+        이번달의 마지막날 : {nextMonth + 1}월 {nextDate}일 {getDay(nextDay)}요일
+      </h5>
       <Grid>
         <div>
           <div>col1</div>

@@ -15,19 +15,22 @@ const Calendar = () => {
     const preDay = startDay.getDay();
     const preMonth = startDay.getMonth();
 
-    console.log("currentMonth::", currentMonth);
-
     const endDay = new Date(currentYear, currentMonth + 1, 0);
     const nextDate = endDay.getDate();
     const nextDay = endDay.getDay();
     const nextMonth = endDay.getMonth();
 
+    console.log("preMonth::", preMonth);
+    console.log("currentMonth::", currentMonth);
+    console.log("nextMonth::", nextMonth);
+
     const preCalendar = [];
     // 지난달 표시할 내용
     // 요일은 일요일 부터 시작
+
     for (let i = preDate - preDay; i <= preDate; i++) {
       // console.log("i::", typeof i);
-      preCalendar.push({ m: "p", d: i });
+      preCalendar.push({ m: preMonth + 1, d: i });
       // setPreCalendar((preCalendar) => [...preCalendar, i]);
     }
     // console.log("preCalendar::", preCalendar);
@@ -36,14 +39,14 @@ const Calendar = () => {
     // 이번달 표시할 내용
     for (let i = 1; i <= nextDate; i++) {
       // console.log("i:::", i);
-      currentCalendar.push({ m: "c", d: i });
+      currentCalendar.push({ m: currentMonth + 1, d: i });
       // setCurrentCalendar((currentCalendar) => [...currentCalendar, i]);
     }
     // 다음달 표시 내용
     const nextCalendar = [];
     for (let i = 1; i < (nextDay % 7 === 0 ? 0 : 7 - nextDay) + 7; i++) {
       // console.log("i::", i);
-      nextCalendar.push({ m: "n", d: i });
+      nextCalendar.push({ m: nextMonth + 2, d: i });
       // setNextCalendar((nextCalendar) => [...nextCalendar, i]);
     }
 
@@ -66,6 +69,8 @@ const Calendar = () => {
     "금",
     "토",
   ]);
+
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     setDates();
@@ -90,9 +95,15 @@ const Calendar = () => {
   const decrease = () => {
     setCurrent(new Date(current.getFullYear(), current.getMonth() - 1, 1));
   };
-
+  const selectDay = () => {
+    if (toggle) {
+      setToggle(false);
+    } else {
+      setToggle(true);
+    }
+  };
   return (
-    <div>
+    <Wrapper>
       Calendar
       <br />
       <br />
@@ -108,13 +119,13 @@ const Calendar = () => {
             {current.getFullYear()}년 {current.getMonth() + 1}월
           </div>
           <div>
-            <Icon icon="charm:chevron-up" onClick={increase} />
             <Icon icon="charm:chevron-down" onClick={decrease} />
+            <Icon icon="charm:chevron-up" onClick={increase} />
           </div>
         </CalendarHeader>
         <div style={{ display: "flex" }}>
           {weeks.map((value) => (
-            <Day key={value} color={"white"} border={"none"} fs={"12px"}>
+            <Day key={value} color={"white"} hborder={"none"} fs={"12px"}>
               {value}
             </Day>
           ))}
@@ -124,14 +135,19 @@ const Calendar = () => {
           .map((_, i) => (
             <div key={`a_${i}`} style={{ display: "flex" }}>
               {allCalendar.slice(7 * i, 7 * i + 7).map((v, i) => (
-                <Day key={i} color={v.m === "c" ? "white" : "gray"}>
+                <Day
+                  key={i}
+                  color={v.m === current.getMonth() + 1 ? "white" : "gray"}
+                  onClick={selectDay}
+                  className={toggle ? "t-active" : ""}
+                >
                   {v.d}
                 </Day>
               ))}
             </div>
           ))}
       </div>
-    </div>
+    </Wrapper>
   );
 };
 
@@ -156,6 +172,12 @@ const Grid = styled.div`
   }
   > div:last-child {
     border-bottom: none;
+  }
+`;
+
+const Wrapper = styled.div`
+  .t-active {
+    border: 2px solid blue;
   }
 `;
 
@@ -185,10 +207,9 @@ const Day = styled.div`
   justify-content: center;
   align-items: center;
   font-size: ${(props) => props.fs || "14px"};
-  /* border-radius: 8px; */
   color: ${(props) => props.color || "black"};
   cursor: pointer;
   &:hover {
-    border: ${(props) => props.border || "1px solid white"};
+    border: ${(props) => props.hborder || "2px solid white"};
   }
 `;

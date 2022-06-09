@@ -6,16 +6,16 @@ const Calendar = () => {
   // const [now, setNow] = useState(new Date());
 
   const setDates = () => {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    const currentMonth = now.getMonth();
+    // const now = new Date();
+    const currentYear = current.getFullYear();
+    const currentMonth = current.getMonth();
 
     const startDay = new Date(currentYear, currentMonth, 0);
     const preDate = startDay.getDate();
     const preDay = startDay.getDay();
     const preMonth = startDay.getMonth();
 
-    // console.log("currentMonth::", currentMonth);
+    console.log("currentMonth::", currentMonth);
 
     const endDay = new Date(currentYear, currentMonth + 1, 0);
     const nextDate = endDay.getDate();
@@ -55,7 +55,7 @@ const Calendar = () => {
   // const [preCalendar, setPreCalendar] = useState([]);
   // const [currentCalendar, setCurrentCalendar] = useState([]);
   // const [nextCalendar, setNextCalendar] = useState([]);
-  const [current, setCurrent] = useState();
+  const [current, setCurrent] = useState(new Date());
   const [allCalendar, setAllCalendar] = useState([]);
   const [weeks, setWeeks] = useState([
     "일",
@@ -76,11 +76,20 @@ const Calendar = () => {
       // setNextCalendar([]);
       setAllCalendar([]);
     };
-  }, []);
+  }, [current]);
 
   // console.log("currentCalendar::", currentCalendar);
   // console.log("nextCalendar::", nextCalendar);
   // console.log("allCalendar::", allCalendar);
+
+  console.log("current::", current);
+
+  const increase = () => {
+    setCurrent(new Date(current.getFullYear(), current.getMonth() + 1, 1));
+  };
+  const decrease = () => {
+    setCurrent(new Date(current.getFullYear(), current.getMonth() - 1, 1));
+  };
 
   return (
     <div>
@@ -95,10 +104,12 @@ const Calendar = () => {
         }}
       >
         <CalendarHeader>
-          <div>2022년 6월</div>
           <div>
-            <Icon icon="charm:chevron-up" />
-            <Icon icon="charm:chevron-down" />
+            {current.getFullYear()}년 {current.getMonth() + 1}월
+          </div>
+          <div>
+            <Icon icon="charm:chevron-up" onClick={increase} />
+            <Icon icon="charm:chevron-down" onClick={decrease} />
           </div>
         </CalendarHeader>
         <div style={{ display: "flex" }}>

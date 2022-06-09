@@ -15,7 +15,7 @@ const Calendar = () => {
     const preDay = startDay.getDay();
     const preMonth = startDay.getMonth();
 
-    console.log("currentMonth::", currentMonth);
+    // console.log("currentMonth::", currentMonth);
 
     const endDay = new Date(currentYear, currentMonth + 1, 0);
     const nextDate = endDay.getDate();
@@ -30,7 +30,7 @@ const Calendar = () => {
       preCalendar.push({ m: "p", d: i });
       // setPreCalendar((preCalendar) => [...preCalendar, i]);
     }
-    console.log("preCalendar::", preCalendar);
+    // console.log("preCalendar::", preCalendar);
 
     const currentCalendar = [];
     // 이번달 표시할 내용
@@ -41,7 +41,7 @@ const Calendar = () => {
     }
     // 다음달 표시 내용
     const nextCalendar = [];
-    for (let i = 1; i < (nextDay % 7 === 0 ? 0 : 7 - nextDay); i++) {
+    for (let i = 1; i < (nextDay % 7 === 0 ? 0 : 7 - nextDay) + 7; i++) {
       // console.log("i::", i);
       nextCalendar.push({ m: "n", d: i });
       // setNextCalendar((nextCalendar) => [...nextCalendar, i]);
@@ -52,24 +52,6 @@ const Calendar = () => {
     );
   };
 
-  const getDay = (n) => {
-    switch (n % 7) {
-      case 0:
-        return "일";
-      case 1:
-        return "월";
-      case 2:
-        return "화";
-      case 3:
-        return "수";
-      case 4:
-        return "목";
-      case 5:
-        return "금";
-      case 6:
-        return "토";
-    }
-  };
   // const [preCalendar, setPreCalendar] = useState([]);
   // const [currentCalendar, setCurrentCalendar] = useState([]);
   // const [nextCalendar, setNextCalendar] = useState([]);
@@ -98,7 +80,7 @@ const Calendar = () => {
 
   // console.log("currentCalendar::", currentCalendar);
   // console.log("nextCalendar::", nextCalendar);
-  console.log("allCalendar::", allCalendar);
+  // console.log("allCalendar::", allCalendar);
 
   return (
     <div>
@@ -173,9 +155,14 @@ const CalendarHeader = styled.div`
   color: white;
   font-size: 16px;
   svg {
-    margin-left: 8px;
     width: 30px;
     height: 30px;
+    margin-left: 8px;
+    color: rgb(165, 165, 165);
+    cursor: pointer;
+  }
+  svg:hover {
+    color: white;
   }
 `;
 

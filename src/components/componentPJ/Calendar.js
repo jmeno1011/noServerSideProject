@@ -21,23 +21,34 @@ const Calendar = () => {
     const nextDay = endDay.getDay();
     const nextMonth = endDay.getMonth();
 
+    const preCalendar = [];
     // 지난달 표시할 내용
     // 요일은 일요일 부터 시작
     for (let i = preDate - preDay; i <= preDate; i++) {
       // console.log("i::", typeof i);
-      setPreCalendar((preCalendar) => [...preCalendar, i]);
+      preCalendar.push({ m: "p", d: i });
+      // setPreCalendar((preCalendar) => [...preCalendar, i]);
     }
+    console.log("preCalendar::", preCalendar);
 
+    const currentCalendar = [];
     // 이번달 표시할 내용
     for (let i = 1; i <= nextDate; i++) {
       // console.log("i:::", i);
-      setCurrentCalendar((currentCalendar) => [...currentCalendar, i]);
+      currentCalendar.push({ m: "c", d: i });
+      // setCurrentCalendar((currentCalendar) => [...currentCalendar, i]);
     }
     // 다음달 표시 내용
+    const nextCalendar = [];
     for (let i = 1; i < (nextDay % 7 === 0 ? 0 : 7 - nextDay); i++) {
       // console.log("i::", i);
-      setNextCalendar((nextCalendar) => [...nextCalendar, i]);
+      nextCalendar.push({ m: "n", d: i });
+      // setNextCalendar((nextCalendar) => [...nextCalendar, i]);
     }
+
+    setAllCalendar((allCalendar) =>
+      allCalendar.concat(preCalendar, currentCalendar, nextCalendar)
+    );
   };
 
   const getDay = (n) => {
@@ -58,116 +69,65 @@ const Calendar = () => {
         return "토";
     }
   };
-  const [preCalendar, setPreCalendar] = useState([]);
-  const [currentCalendar, setCurrentCalendar] = useState([]);
-  const [nextCalendar, setNextCalendar] = useState([]);
+  // const [preCalendar, setPreCalendar] = useState([]);
+  // const [currentCalendar, setCurrentCalendar] = useState([]);
+  // const [nextCalendar, setNextCalendar] = useState([]);
+  const [allCalendar, setAllCalendar] = useState([]);
+  const [weeks, setWeeks] = useState([
+    "일",
+    "월",
+    "화",
+    "수",
+    "목",
+    "금",
+    "토",
+  ]);
 
   useEffect(() => {
     setDates();
 
     return () => {
-      setPreCalendar([]);
-      setCurrentCalendar([]);
-      setNextCalendar([]);
+      // setPreCalendar([]);
+      // setCurrentCalendar([]);
+      // setNextCalendar([]);
+      setAllCalendar([]);
     };
   }, []);
 
-  console.log("preCalendar::", preCalendar);
-  console.log("currentCalendar::", currentCalendar);
-  console.log("nextCalendar::", nextCalendar);
+  // console.log("currentCalendar::", currentCalendar);
+  // console.log("nextCalendar::", nextCalendar);
+  console.log("allCalendar::", allCalendar);
 
   return (
     <div>
       Calendar
-      {/* <h5>startDay : {startDay.toString()}</h5>
-      <h5>
-        이전달의 마지막날：{preMonth + 1}월 {preDate}일 {getDay(preDay)}요일
-      </h5>
-      <h5>
-        이번달의 마지막날 : {nextMonth + 1}월 {nextDate}일 {getDay(nextDay)}요일
-      </h5> */}
-      <Day>1</Day>
       <div
         style={{
-          display: "flex",
+          // display: "flex",
           background: "#1F1F1F",
-          padding: "0 16px",
+          padding: "8px 16px",
           width: "fit-content",
         }}
       >
-        {preCalendar.length !== 0
-          ? preCalendar.map((value) => (
-              <Day key={`pre_${value}`} color={"gray"}>
-                {value}
-              </Day>
-            ))
-          : ""}
+        <div style={{ display: "flex" }}>
+          {weeks.map((value) => (
+            <Day key={value} color={"white"} border={"none"}>
+              {value}
+            </Day>
+          ))}
+        </div>
+        {Array(Math.floor(allCalendar.length / 7))
+          .fill()
+          .map((_, i) => (
+            <div key={`a_${i}`} style={{ display: "flex" }}>
+              {allCalendar.slice(7 * i, 7 * i + 7).map((v, i) => (
+                <Day key={i} color={v.m === "c" ? "white" : "gray"}>
+                  {v.d}
+                </Day>
+              ))}
+            </div>
+          ))}
       </div>
-      <Grid>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-        <div>
-          <div>col1</div>
-          <div>col2</div>
-          <div>col3</div>
-          <div>col4</div>
-          <div>col5</div>
-          <div>col6</div>
-          <div>col7</div>
-        </div>
-      </Grid>
     </div>
   );
 };
@@ -203,8 +163,10 @@ const Day = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
-  border-radius: 8px;
-  /* background-color: white; */
+  /* border-radius: 8px; */
   color: ${(props) => props.color || "black"};
+  cursor: pointer;
+  &:hover {
+    border: ${(props) => props.border || "1px solid white"};
+  }
 `;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Icon } from "@iconify/react";
 import styled from "styled-components";
 
 const Calendar = () => {
@@ -72,6 +73,7 @@ const Calendar = () => {
   // const [preCalendar, setPreCalendar] = useState([]);
   // const [currentCalendar, setCurrentCalendar] = useState([]);
   // const [nextCalendar, setNextCalendar] = useState([]);
+  const [current, setCurrent] = useState();
   const [allCalendar, setAllCalendar] = useState([]);
   const [weeks, setWeeks] = useState([
     "일",
@@ -101,17 +103,25 @@ const Calendar = () => {
   return (
     <div>
       Calendar
+      <br />
+      <br />
       <div
         style={{
-          // display: "flex",
           background: "#1F1F1F",
           padding: "8px 16px",
           width: "fit-content",
         }}
       >
+        <CalendarHeader>
+          <div>2022년 6월</div>
+          <div>
+            <Icon icon="charm:chevron-up" />
+            <Icon icon="charm:chevron-down" />
+          </div>
+        </CalendarHeader>
         <div style={{ display: "flex" }}>
           {weeks.map((value) => (
-            <Day key={value} color={"white"} border={"none"}>
+            <Day key={value} color={"white"} border={"none"} fs={"12px"}>
               {value}
             </Day>
           ))}
@@ -156,6 +166,19 @@ const Grid = styled.div`
   }
 `;
 
+const CalendarHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  svg {
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+  }
+`;
+
 const Day = styled.div`
   margin: 2px;
   width: 30px;
@@ -163,6 +186,7 @@ const Day = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: ${(props) => props.fs || "14px"};
   /* border-radius: 8px; */
   color: ${(props) => props.color || "black"};
   cursor: pointer;

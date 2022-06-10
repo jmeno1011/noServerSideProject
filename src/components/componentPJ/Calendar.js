@@ -30,7 +30,7 @@ const Calendar = () => {
 
     for (let i = preDate - preDay; i <= preDate; i++) {
       // console.log("i::", typeof i);
-      preCalendar.push({ m: preMonth + 1, d: i });
+      preCalendar.push({ m: `2022-${preMonth + 1}-${i}`, d: i });
       // setPreCalendar((preCalendar) => [...preCalendar, i]);
     }
     // console.log("preCalendar::", preCalendar);
@@ -39,14 +39,14 @@ const Calendar = () => {
     // 이번달 표시할 내용
     for (let i = 1; i <= nextDate; i++) {
       // console.log("i:::", i);
-      currentCalendar.push({ m: currentMonth + 1, d: i });
+      currentCalendar.push({ m: `2022-${currentMonth + 1}-${i}`, d: i });
       // setCurrentCalendar((currentCalendar) => [...currentCalendar, i]);
     }
     // 다음달 표시 내용
     const nextCalendar = [];
     for (let i = 1; i < (nextDay % 7 === 0 ? 0 : 7 - nextDay) + 7; i++) {
       // console.log("i::", i);
-      nextCalendar.push({ m: nextMonth + 2, d: i });
+      nextCalendar.push({ m: `2022-${nextMonth + 2}-${i}`, d: i });
       // setNextCalendar((nextCalendar) => [...nextCalendar, i]);
     }
 
@@ -70,7 +70,7 @@ const Calendar = () => {
     "토",
   ]);
 
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState();
 
   useEffect(() => {
     setDates();
@@ -88,6 +88,7 @@ const Calendar = () => {
   // console.log("allCalendar::", allCalendar);
 
   console.log("current::", current);
+  console.log("allCalendar::", allCalendar);
 
   const increase = () => {
     setCurrent(new Date(current.getFullYear(), current.getMonth() + 1, 1));
@@ -95,13 +96,14 @@ const Calendar = () => {
   const decrease = () => {
     setCurrent(new Date(current.getFullYear(), current.getMonth() - 1, 1));
   };
-  const selectDay = () => {
-    if (toggle) {
-      setToggle(false);
-    } else {
-      setToggle(true);
-    }
-  };
+  // const selectDay = (e) => {
+  //   console.log(e.target.outerText);
+  //   if (toggle) {
+  //     setToggle(false);
+  //   } else {
+  //     setToggle(true);
+  //   }
+  // };
   return (
     <Wrapper>
       Calendar
@@ -137,11 +139,16 @@ const Calendar = () => {
               {allCalendar.slice(7 * i, 7 * i + 7).map((v, i) => (
                 <Day
                   key={i}
-                  color={v.m === current.getMonth() + 1 ? "white" : "gray"}
-                  onClick={selectDay}
-                  className={toggle ? "t-active" : ""}
+                  color={
+                    Number(v.m.split("-")[1]) === current.getMonth() + 1
+                      ? "white"
+                      : "gray"
+                  }
+                  name={v.m}
+                  onClick={() => setToggle(v.m)}
+                  className={toggle === v.m ? "t-active" : ""}
                 >
-                  {v.d}
+                  <abbr aria-label={v.m}>{v.d}</abbr>
                 </Day>
               ))}
             </div>

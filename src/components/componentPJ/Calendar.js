@@ -184,7 +184,7 @@ const Grid = styled.div`
 
 const Wrapper = styled.div`
   .t-active {
-    border: 2px solid blue;
+    border: 2px solid blue !important;
   }
 `;
 

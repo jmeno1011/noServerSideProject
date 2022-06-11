@@ -60,15 +60,8 @@ const Calendar = () => {
   // const [nextCalendar, setNextCalendar] = useState([]);
   const [current, setCurrent] = useState(new Date());
   const [allCalendar, setAllCalendar] = useState([]);
-  const [weeks, setWeeks] = useState([
-    "일",
-    "월",
-    "화",
-    "수",
-    "목",
-    "금",
-    "토",
-  ]);
+  const [] = useState("");
+  const weeks = ["일", "월", "화", "수", "목", "금", "토"];
 
   const [toggle, setToggle] = useState();
 
@@ -88,6 +81,11 @@ const Calendar = () => {
   // console.log("allCalendar::", allCalendar);
 
   console.log("current::", current);
+  console.log(
+    `current - format :: ${current.getFullYear()}-${
+      current.getMonth() + 1
+    }-${current.getDate()}`
+  );
   console.log("allCalendar::", allCalendar);
 
   const increase = () => {
@@ -146,7 +144,16 @@ const Calendar = () => {
                   }
                   name={v.m}
                   onClick={() => setToggle(v.m)}
-                  className={toggle === v.m ? "t-active" : ""}
+                  className={
+                    (toggle === v.m ? "t-active" : "") +
+                    " " +
+                    (v.m ===
+                    `${current.getFullYear()}-${
+                      current.getMonth() + 1
+                    }-${current.getDate()}`
+                      ? "now"
+                      : "")
+                  }
                 >
                   <abbr aria-label={v.m}>{v.d}</abbr>
                 </Day>
@@ -184,7 +191,10 @@ const Grid = styled.div`
 
 const Wrapper = styled.div`
   .t-active {
-    border: 2px solid blue !important;
+    border: 2px solid #ff3333 !important;
+  }
+  .now {
+    background-color: #00d2ff !important;
   }
 `;
 

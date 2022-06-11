@@ -237,8 +237,6 @@ export const Layout = () => {
                           <summary>html</summary>
                           <nav>
                             <ul>
-                              <li>sematic</li>
-                              <li>css</li>
                               <li>
                                 <Link
                                   className="side-nav"
@@ -246,6 +244,15 @@ export const Layout = () => {
                                   style={{ paddingBottom: 4, marginBottom: 8 }}
                                 >
                                   Calendar
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  className="side-nav"
+                                  to="hierachies"
+                                  style={{ paddingBottom: 4, marginBottom: 8 }}
+                                >
+                                  Hierarchies
                                 </Link>
                               </li>
                             </ul>
@@ -329,6 +336,12 @@ const SideNav = styled.div`
   @media only screen and (max-width: 1024px) {
     display: none;
   }
+  summary {
+    margin-bottom: 8px;
+  }
+  details > nav {
+    margin-left: 8px;
+  }
 `;
 
 const SmallNav = styled.div`
@@ -337,6 +350,7 @@ const SmallNav = styled.div`
     display: block;
   }
   details summary {
+    margin-bottom: 8px;
     cursor: pointer;
     ::after {
       padding-left: 0.5rem;

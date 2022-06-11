@@ -26,6 +26,7 @@ import Chapter6 from "./components/chapter6/Chapter6";
 import Chapter7 from "./components/chapter7/Chapter7";
 import Pockemon from "./components/resource/Pockemon";
 import Calendar from "./components/componentPJ/Calendar";
+import Hierarchies from "./components/componentPJ/Hierarchies";
 
 function App() {
   let navigate = useNavigate();
@@ -113,6 +114,7 @@ function App() {
               }
             />
             <Route path="calendar" element={<Calendar />} />
+            <Route path="hierachies" element={<Hierarchies />} />
           </Route>
           <Route path="resource" element={<Pockemon />} />
           <Route path="chapter8-1" element={<Counters />} />

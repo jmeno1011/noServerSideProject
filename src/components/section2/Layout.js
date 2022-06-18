@@ -234,7 +234,9 @@ export const Layout = () => {
                       </li>
                       <li>
                         <details>
-                          <summary>html</summary>
+                          <summary style={{ fontWeight: 700 }}>
+                            Components
+                          </summary>
                           <nav>
                             <ul>
                               <li>

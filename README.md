@@ -1,7 +1,6 @@
 # Getting Started github.io site
 
-## 사이드 주소
-[Here](https://jmeno1011.github.io/prac_etc/)
+[깃헙 페이지 링크](https://jmeno1011.github.io/prac_etc/)
 
 ### 내용
 - more을 눌러서 login하기

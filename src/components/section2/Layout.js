@@ -42,11 +42,22 @@ export const Layout = () => {
                         <li><Link className="side-nav" to="/prac_etc/main">⭐메모장</Link></li>
                         <li><Link className="side-nav" to="weather">⛅날씨</Link></li>
                         <li><Link className="side-nav" to="test">🛠낙서장</Link></li>
+                        <li><Link className="side-nav" to="news">📰뉴스</Link></li>
                         <li><Link className="side-nav" to="chapter3">리다기 3장</Link></li>
                         <li><Link className="side-nav" to="chapter4">리다기 4장</Link></li>
                         <li><Link className="side-nav" to="chapter5">리다기 5장</Link></li>
                         <li><Link className="side-nav" to="chapter6">리다기 6장</Link></li>
                         <li><Link className="side-nav" to="chapter7">리다기 7장</Link></li>
+                        <li><Link className="side-nav" to="chapter8-1">리다기 8-1장</Link></li>
+                        <li><Link className="side-nav" to="chapter8-2">리다기 8-2장</Link></li>
+                        <li><Link className="side-nav" to="chapter8-3">리다기 8-3장</Link></li>
+                        <li><Link className="side-nav" to="chapter8-4">리다기 8-4장</Link></li>
+                        <li><Link className="side-nav" to="chapter8-5">리다기 8-5장</Link></li>
+                        <li><Link className="side-nav" to="chapter8-6">리다기 8-6장</Link></li>
+                        <li><Link className="side-nav" to="chapter9-1">리다기 9-1장</Link></li>
+                        <li><Link className="side-nav" to="chapter12-1">리다기 12-1장</Link></li>
+                        <li><Link className="side-nav" to="chapter12-2">리다기 12-2장</Link></li>
+                        <li><Link className="side-nav" to="chapter12-3">리다기 12-3장</Link></li>
                       </ul>
                     </nav>
                   </div>

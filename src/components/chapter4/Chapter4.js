@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 import EventPractice1 from "./EventPractice1";
 import EventPractice2 from "./EventPractice2";
 import EventPractice3 from "./EventPractice3";

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ContentTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 import ValidationSample from "./validation/ValidationSample";
 
 export default class CompoRender extends Component {

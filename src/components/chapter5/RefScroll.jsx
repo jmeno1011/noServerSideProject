@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { ContentTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 import ScrollBox from "./ScrollBox";
 
 export default class RefScroll extends Component {

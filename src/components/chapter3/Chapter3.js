@@ -5,7 +5,7 @@ import "./styles.css";
 import Counter from "./Counter";
 import Say from "./Say";
 import { ContentTitle, HeaderTitle } from "./titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 
 function Chapter3() {
   const blackDog = new BlackDog();

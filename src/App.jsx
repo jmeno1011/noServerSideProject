@@ -25,8 +25,9 @@ import Chapter5 from "./components/chapter5/Chapter5";
 import Chapter6 from "./components/chapter6/Chapter6";
 import Chapter7 from "./components/chapter7/Chapter7";
 import Pockemon from "./components/resource/Pockemon";
-import Calendar from "./components/componentPJ/Calendar";
+import Calendar from "./components/calendar/Calendar";
 import Hierarchies from "./components/componentPJ/Hierarchies";
+import News from "./components/news/News";
 
 function App() {
   let navigate = useNavigate();
@@ -40,94 +41,31 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="sign-up" element={<SignUp />} />
           <Route path="sign-in" element={<SignIn />} />
-          <Route
-            path="main/"
-            element={
-              <RequirAuth>
-                <Layout />
-              </RequirAuth>
-            }
-          >
+          <Route path="pokemon" element={<Pockemon />} />
+          <Route path="main/" element={<RequirAuth Component={Layout} />}>
+            <Route index element={<RequirAuth Component={Memo} />} />
             <Route path="weather" element={<Weather />} />
-            <Route
-              index
-              element={
-                <RequirAuth>
-                  <Memo />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="memo"
-              element={
-                <RequirAuth>
-                  <Memo />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="test"
-              element={
-                <RequirAuth>
-                  <Test />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="chapter3"
-              element={
-                <RequirAuth>
-                  <Chapter3 />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="chapter4"
-              element={
-                <RequirAuth>
-                  <Chapter4 />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="chapter5"
-              element={
-                <RequirAuth>
-                  <Chapter5 />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="chapter6"
-              element={
-                <RequirAuth>
-                  <Chapter6 />
-                </RequirAuth>
-              }
-            />
-            <Route
-              path="chapter7"
-              element={
-                <RequirAuth>
-                  <Chapter7 />
-                </RequirAuth>
-              }
-            />
+            <Route path="test" element={<RequirAuth Component={Test} />} />
+            <Route path="news" element={<RequirAuth Component={News} />} />
+            <Route path="news/:category" element={<RequirAuth Component={News} />} />
             <Route path="calendar" element={<Calendar />} />
             <Route path="hierachies" element={<Hierarchies />} />
+            <Route path="chapter3" element={<RequirAuth Component={Chapter3} />} />
+            <Route path="chapter4" element={<RequirAuth Component={Chapter4} />} />
+            <Route path="chapter5" element={<RequirAuth Component={Chapter5} />} />
+            <Route path="chapter6" element={<RequirAuth Component={Chapter6} />} />
+            <Route path="chapter7" element={<RequirAuth Component={Chapter7} />} />
+            <Route path="chapter8-1" element={<RequirAuth Component={Counters} />} />
+            <Route path="chapter8-2" element={<RequirAuth Component={Info} />} />
+            <Route path="chapter8-3" element={<RequirAuth Component={Counters2} />} />
+            <Route path="chapter8-4" element={<RequirAuth Component={Info2} />} />
+            <Route path="chapter8-5" element={<RequirAuth Component={Average} />} />
+            <Route path="chapter8-6" element={<RequirAuth Component={Info3} />} />
+            <Route path="chapter9-1" element={<RequirAuth Component={SassComponent} />} />
+            <Route path="chapter12-1" element={<RequirAuth Component={Immer} />} />
+            <Route path="chapter12-2" element={<RequirAuth Component={Immer2} />} />
+            <Route path="chapter12-3" element={<RequirAuth Component={Immer3} />} />
           </Route>
-          <Route path="pokemon" element={<Pockemon />} />
-          <Route path="chapter8-1" element={<Counters />} />
-          <Route path="chapter8-2" element={<Info />} />
-          <Route path="chapter8-3" element={<Counters2 />} />
-          <Route path="chapter8-4" element={<Info2 />} />
-          <Route path="chapter8-5" element={<Average />} />
-          <Route path="chapter8-6" element={<Info3 />} />
-          <Route path="chapter9-1" element={<SassComponent />} />
-          <Route path="chapter12-1" element={<Immer />} />
-          <Route path="chapter12-2" element={<Immer2 />} />
-          <Route path="chapter12-3" element={<Immer3 />} />
-
           <Route
             path="*"
             element={
@@ -150,7 +88,7 @@ function App() {
   );
 }
 
-function RequirAuth({ children }) {
+function RequirAuth({ Component }) {
   let auth = JSON.parse(window.localStorage.getItem("isLogin"));
   let location = useLocation();
   if (!auth) {
@@ -159,7 +97,7 @@ function RequirAuth({ children }) {
     );
   }
 
-  return children;
+  return <Component />;
 }
 
 export default App;

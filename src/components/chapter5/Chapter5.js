@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 import CompoRender from "./CompoRender";
 import RefScroll from "./RefScroll";
 

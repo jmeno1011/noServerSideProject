@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ContentTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 
 // EventPractice6을 함수형 컴포넌트로 변경
 function EventPractice8() {

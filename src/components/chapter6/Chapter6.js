@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 import { IterationSample1 } from "./IterationSample1";
 import { IterationSample2 } from "./IterationSample2";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentTitle } from "../chapter3/titleLink";
-import Title from "../Title";
+import Title from "../common/Title";
 
 export const IterationSample1 = () => {
   const names = ["눈사람", "얼음", "눈", "바람"];

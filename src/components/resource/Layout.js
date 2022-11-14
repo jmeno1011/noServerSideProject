@@ -11,18 +11,12 @@ const Layout = () => {
   const fetchUser = async () => {
     const response = await axios({
       method: "get",
-      url: "https://node-login-jwt-production.up.railway.app/pokemon",
+      url: "https://us-central1-dashboard-prac-backend.cloudfunctions.net/v1/api/pokemon",
     });
     const arr = [];
-    response.data.pokemon.map((value) => arr.push(value.type.split(",")));
-    // console.log(
-    //   "filter::",
-    //   response.data.pokemon.filter((item) => item.type.includes("풀"))
-    // );
-    // console.log(arr);
+    response.data.map((value) => arr.push(value.type.split(",")));
     setType(arr);
-    // console.log("response.data.pokemon:", response.data.pokemon);
-    setPockemon(response.data.pokemon);
+    setPockemon(response.data);
   };
   useEffect(() => {
     fetchUser();

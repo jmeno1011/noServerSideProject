@@ -13,7 +13,7 @@ const Header = () => {
     memo: "/prac_etc/main/memo",
     section5: "/prac_etc/section5",
     weather: "/prac_etc/main/weather",
-    resource: "/prac_etc/resource"
+    pokemon: "/prac_etc/pokemon"
   };
 
   return (
@@ -52,10 +52,10 @@ const Header = () => {
             <NavLi ml="2rem">
               <Link
                 className="a-white"
-                to="/prac_etc/resource"
-                style={location.pathname === nav.resource ? active_color : {}}
+                to="/prac_etc/pokemon"
+                style={location.pathname === nav.pokemon ? active_color : {}}
               >
-                Resources
+                pokemon
               </Link>
             </NavLi>
             <NavLi ml="2rem">

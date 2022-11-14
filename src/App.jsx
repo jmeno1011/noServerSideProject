@@ -116,7 +116,7 @@ function App() {
             <Route path="calendar" element={<Calendar />} />
             <Route path="hierachies" element={<Hierarchies />} />
           </Route>
-          <Route path="resource" element={<Pockemon />} />
+          <Route path="pokemon" element={<Pockemon />} />
           <Route path="chapter8-1" element={<Counters />} />
           <Route path="chapter8-2" element={<Info />} />
           <Route path="chapter8-3" element={<Counters2 />} />

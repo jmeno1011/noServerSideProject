@@ -1,8 +1,8 @@
 # Getting Started github.io site
 
-[깃헙 페이지 링크](https://jmeno1011.github.io/prac_etc/)
-[kakao-clone](https://jmeno1011.github.io/kokoa-clone-2022--03/)
-[vanilla-clone](https://jmeno1011.github.io/vanillaJS-Challenge/)
+[깃헙 페이지 링크](https://jmeno1011.github.io/prac_etc/)  
+[kakao-clone](https://jmeno1011.github.io/kokoa-clone-2022--03/)  
+[vanilla-clone](https://jmeno1011.github.io/vanillaJS-Challenge/)  
 
 ### 내용
 - more을 눌러서 login하기

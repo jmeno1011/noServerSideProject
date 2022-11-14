@@ -20,9 +20,9 @@ const Calendar = () => {
     const nextDay = endDay.getDay();
     const nextMonth = endDay.getMonth();
 
-    console.log("preMonth::", preMonth);
-    console.log("currentMonth::", currentMonth);
-    console.log("nextMonth::", nextMonth);
+    // console.log("preMonth::", preMonth);
+    // console.log("currentMonth::", currentMonth);
+    // console.log("nextMonth::", nextMonth);
 
     const preCalendar = [];
     // 지난달 표시할 내용
@@ -80,13 +80,13 @@ const Calendar = () => {
   // console.log("nextCalendar::", nextCalendar);
   // console.log("allCalendar::", allCalendar);
 
-  console.log("current::", current);
-  console.log(
-    `current - format :: ${current.getFullYear()}-${
-      current.getMonth() + 1
-    }-${current.getDate()}`
-  );
-  console.log("allCalendar::", allCalendar);
+  // console.log("current::", current);
+  // console.log(
+  //   `current - format :: ${current.getFullYear()}-${
+  //     current.getMonth() + 1
+  //   }-${current.getDate()}`
+  // );
+  // console.log("allCalendar::", allCalendar);
 
   const increase = () => {
     setCurrent(new Date(current.getFullYear(), current.getMonth() + 1, 1));

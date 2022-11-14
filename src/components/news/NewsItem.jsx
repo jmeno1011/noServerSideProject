@@ -7,15 +7,14 @@ const NewsItem = ({ article }) => {
     <NewsItemBlock>
       {urlToImage && (
         <div className="thumbnail">
-          {/* <a href={url} target="_blank" rel="noopenernoreferrer"> */}
-          <a href={url} rel="noopenernoreferrer">
+          <a href={url} target="_blank" rel="noopenernoreferrer">
             <img src={urlToImage} alt="thumbnail" />
           </a>
         </div>
       )}
       <div className="contents">
         <h2>
-          <a href={url} rel="noopenernoreferrer">
+          <a href={url} target="_blank" rel="noopenernoreferrer">
             {title}
           </a>
         </h2>

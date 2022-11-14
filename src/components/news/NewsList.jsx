@@ -42,7 +42,6 @@ const NewsList = ({ category }) => {
     // response 값이 유효 할 때
     // {}로 감싼 이유는 object인 response.data안의 articles 의 value를 가져오기 위함
     const { articles } = response.data;
-    console.log(articles);
     return (
         <NewsListBlock>
             {articles.map((article) => (

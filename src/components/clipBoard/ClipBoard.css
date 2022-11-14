@@ -1,0 +1,51 @@
+.copy-area {
+  margin: 1rem;
+  background: #edeabf;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.copy-area-pre {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.alert-text {
+  padding: 3px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  position: absolute;
+  right: -40px;
+  top: 0px;
+}
+
+.copy-icon-wrapper {
+  margin-right: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.copy-icon-wrapper:hover {
+  font-size: 20;
+  color: blue;
+}
+.copy-area-input {
+  margin: 0.5rem;
+  font-size: 85%;
+  line-height: 1.45;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.hidden {
+  display: none;
+}

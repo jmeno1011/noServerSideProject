@@ -30,6 +30,7 @@ import Hierarchies from "./components/componentPJ/Hierarchies";
 import News from "./components/news/News";
 import CarouselBasic from "./components/carousel/CarouselBasic";
 import ClipBoard from "./components/clipBoard/ClipBoard";
+import Message from "./components/message/Message";
 
 function App() {
   let navigate = useNavigate();
@@ -53,6 +54,7 @@ function App() {
             <Route path="calendar" element={<Calendar />} />
             <Route path="carousel-basic" element={<CarouselBasic />} />
             <Route path="clip-board" element={<ClipBoard />} />
+            <Route path="message" element={<Message />} />
             <Route path="hierachies" element={<Hierarchies />} />
             <Route path="chapter3" element={<RequirAuth Component={Chapter3} />} />
             <Route path="chapter4" element={<RequirAuth Component={Chapter4} />} />

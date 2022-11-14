@@ -1,12 +1,16 @@
 # Getting Started github.io site
 
-[깃헙 페이지 링크](https://jmeno1011.github.io/prac_etc/)  
-[kakao-clone](https://jmeno1011.github.io/kokoa-clone-2022--03/)  
-[vanilla-clone](https://jmeno1011.github.io/vanillaJS-Challenge/)  
-[step-ui 모양](https://codesandbox.io/s/github/jmeno1011/step-ui-css)  
-[login-ui 모양](https://codesandbox.io/s/self-made-login-template-f9q4wz?file=/src/App.js)  
-[drop-down-menu-ui 모양](https://codesandbox.io/s/intelligent-elion-7q20zd?file=/src/App.js)  
-[css-layout-ui 모양](https://jmeno1011.github.io/css-test/)  
+### 깃헙 페에지 링크
+- [현재 깃헙 페이지 링크](https://jmeno1011.github.io/prac_etc/)  
+- [css-layout 연습](https://jmeno1011.github.io/css-test/)  
+- [kakao-clone](https://jmeno1011.github.io/kokoa-clone-2022--03/)  
+- [vanilla-clone](https://jmeno1011.github.io/vanillaJS-Challenge/)  
+
+### code-sandbox 사용
+- [step-ui 모양](https://codesandbox.io/s/github/jmeno1011/step-ui-css)  
+- [login-ui 모양](https://codesandbox.io/s/self-made-login-template-f9q4wz?file=/src/App.js)  
+- [drop-down-menu-ui 모양](https://codesandbox.io/s/intelligent-elion-7q20zd?file=/src/App.js)  
+
 
 
 ### 내용

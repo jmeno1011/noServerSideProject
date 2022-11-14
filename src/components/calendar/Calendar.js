@@ -167,27 +167,6 @@ const Calendar = () => {
 
 export default Calendar;
 
-const Grid = styled.div`
-  width: fit-content;
-  display: grid;
-  /* grid-template-columns: repeat(7, 50px); */
-  grid-template-rows: repeat(7, 50px);
-  border: 1px solid black;
-  > div {
-    border-bottom: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(7, 50px);
-    > div {
-      border-right: 1px solid black;
-    }
-    > div:last-child {
-      border-right: none;
-    }
-  }
-  > div:last-child {
-    border-bottom: none;
-  }
-`;
 
 const Wrapper = styled.div`
   .t-active {

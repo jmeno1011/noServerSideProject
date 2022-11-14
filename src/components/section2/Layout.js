@@ -41,11 +41,11 @@ export const Layout = () => {
                       <ul>
                         <li><Link className="side-nav" to="/prac_etc/main">⭐메모장</Link></li>
                         <li><Link className="side-nav" to="weather">⛅날씨</Link></li>
-                        <li><Link className="side-nav" to="test">🛠낙서장</Link></li>
                         <li><Link className="side-nav" to="news">📰뉴스</Link></li>
                         <li><Link className="side-nav" to="calendar">📆Calendar</Link></li>
                         <li><Link className="side-nav" to="carousel-basic">⏪⏩Carousel</Link></li>
                         <li><Link className="side-nav" to="clip-board">🧷ClipBoard</Link></li>
+                        <li><Link className="side-nav" to="test">🛠낙서장</Link></li>
                         <li><Link className="side-nav" to="chapter3">리다기 3장</Link></li>
                         <li><Link className="side-nav" to="chapter4">리다기 4장</Link></li>
                         <li><Link className="side-nav" to="chapter5">리다기 5장</Link></li>
@@ -73,12 +73,12 @@ export const Layout = () => {
                     <ul>
                       <li><Link className="side-nav" to="/prac_etc/main">⭐메모장</Link></li>
                       <li><Link className="side-nav" to="weather">⛅날씨</Link></li>
-                      <li><Link className="side-nav" to="test">🛠낙서장</Link></li>
                       <li><Link className="side-nav" to="news">📰뉴스</Link></li>
                       <li><Link className="side-nav" to="calendar">📆Calendar</Link></li>
                       <li><Link className="side-nav" to="carousel-basic">⏪⏩Carousel</Link></li>
                       <li><Link className="side-nav" to="clip-board">🧷ClipBoard</Link></li>
                       <li><Link className="side-nav" to="hierachies">Hierarchies</Link></li>
+                      <li><Link className="side-nav" to="test">🛠낙서장</Link></li>
                       <li>
                         <details>
                           <summary style={{ fontWeight: 700 }}>

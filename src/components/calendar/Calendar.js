@@ -20,10 +20,6 @@ const Calendar = () => {
     const nextDay = endDay.getDay();
     const nextMonth = endDay.getMonth();
 
-    // console.log("preMonth::", preMonth);
-    // console.log("currentMonth::", currentMonth);
-    // console.log("nextMonth::", nextMonth);
-
     const preCalendar = [];
     // 지난달 표시할 내용
     // 요일은 일요일 부터 시작

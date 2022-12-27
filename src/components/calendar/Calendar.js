@@ -3,10 +3,7 @@ import { Icon } from "@iconify/react";
 import styled from "styled-components";
 
 const Calendar = () => {
-  // const [now, setNow] = useState(new Date());
-
   const setDates = () => {
-    // const now = new Date();
     const currentYear = current.getFullYear();
     const currentMonth = current.getMonth();
 
@@ -25,25 +22,16 @@ const Calendar = () => {
     // 요일은 일요일 부터 시작
 
     for (let i = preDate - preDay; i <= preDate; i++) {
-      // console.log("i::", typeof i);
       preCalendar.push({ m: `2022-${preMonth + 1}-${i}`, d: i });
-      // setPreCalendar((preCalendar) => [...preCalendar, i]);
     }
-    // console.log("preCalendar::", preCalendar);
-
     const currentCalendar = [];
-    // 이번달 표시할 내용
     for (let i = 1; i <= nextDate; i++) {
-      // console.log("i:::", i);
       currentCalendar.push({ m: `2022-${currentMonth + 1}-${i}`, d: i });
-      // setCurrentCalendar((currentCalendar) => [...currentCalendar, i]);
     }
     // 다음달 표시 내용
     const nextCalendar = [];
     for (let i = 1; i < (nextDay % 7 === 0 ? 0 : 7 - nextDay) + 7; i++) {
-      // console.log("i::", i);
       nextCalendar.push({ m: `2022-${nextMonth + 2}-${i}`, d: i });
-      // setNextCalendar((nextCalendar) => [...nextCalendar, i]);
     }
 
     setAllCalendar((allCalendar) =>
@@ -51,12 +39,8 @@ const Calendar = () => {
     );
   };
 
-  // const [preCalendar, setPreCalendar] = useState([]);
-  // const [currentCalendar, setCurrentCalendar] = useState([]);
-  // const [nextCalendar, setNextCalendar] = useState([]);
   const [current, setCurrent] = useState(new Date());
   const [allCalendar, setAllCalendar] = useState([]);
-  const [] = useState("");
   const weeks = ["일", "월", "화", "수", "목", "금", "토"];
 
   const [toggle, setToggle] = useState();
@@ -65,24 +49,9 @@ const Calendar = () => {
     setDates();
 
     return () => {
-      // setPreCalendar([]);
-      // setCurrentCalendar([]);
-      // setNextCalendar([]);
       setAllCalendar([]);
     };
   }, [current]);
-
-  // console.log("currentCalendar::", currentCalendar);
-  // console.log("nextCalendar::", nextCalendar);
-  // console.log("allCalendar::", allCalendar);
-
-  // console.log("current::", current);
-  // console.log(
-  //   `current - format :: ${current.getFullYear()}-${
-  //     current.getMonth() + 1
-  //   }-${current.getDate()}`
-  // );
-  // console.log("allCalendar::", allCalendar);
 
   const increase = () => {
     setCurrent(new Date(current.getFullYear(), current.getMonth() + 1, 1));
@@ -90,14 +59,6 @@ const Calendar = () => {
   const decrease = () => {
     setCurrent(new Date(current.getFullYear(), current.getMonth() - 1, 1));
   };
-  // const selectDay = (e) => {
-  //   console.log(e.target.outerText);
-  //   if (toggle) {
-  //     setToggle(false);
-  //   } else {
-  //     setToggle(true);
-  //   }
-  // };
   return (
     <Wrapper>
       Calendar
